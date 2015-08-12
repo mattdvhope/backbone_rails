@@ -6,6 +6,7 @@ gem 'pg'
 gem 'puma'
 gem 'uglifier', '>= 1.3.0'
 
+gem 'turbolinks' 
 gem 'jquery-rails'
 
 gem 'bower-rails'

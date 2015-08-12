@@ -14,6 +14,9 @@ module BackboneRails
     # For Handlebars templates
     config.assets.initialize_on_precompile = false # This avoids running your initializers when compiling assets.
 
+    # Bower asset paths
+    config.assets.paths << Rails.root.join('vendor', 'assets', 'bower_components', 'bootstrap-sass-official')
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
