@@ -9,3 +9,8 @@ Rails.application.config.assets.version = '1.0'
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
+
+# ERB in js...
+# The only reason to use Erb in a Javascript file should be to use the 'asset_path' helper as discussed in http://guides.rubyonrails.org/v4.2.0/asset_pipeline.html#javascript-coffeescript-and-erb.
+# example:
+# $('#logo').attr({ src: "<%= asset_path('logo.png') %>" });
