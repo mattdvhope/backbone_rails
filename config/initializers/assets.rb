@@ -12,5 +12,6 @@ Rails.application.config.assets.version = '1.0'
 
 # ERB in js...
 # The only reason to use Erb in a Javascript file should be to use the 'asset_path' helper as discussed in http://guides.rubyonrails.org/v4.2.0/asset_pipeline.html#javascript-coffeescript-and-erb.
+# You might have to config assets for precompile with a '*.erb', but check out docs first????!!
 # example:
 # $('#logo').attr({ src: "<%= asset_path('logo.png') %>" });

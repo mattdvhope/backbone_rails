@@ -5,3 +5,5 @@
 //= require backbone
 //= require underscore
 //= require_tree .
+
+console.log("js here!!!!!");
