@@ -24,6 +24,7 @@ gem 'figaro'
 gem "better_errors"
 
 group :development, :test do
+  gem 'sprockets_better_errors'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
