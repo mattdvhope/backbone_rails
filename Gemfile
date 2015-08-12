@@ -10,8 +10,9 @@ gem 'jquery-rails'
 
 gem 'bower-rails'
 
-gem 'sprockets-rails', :require => 'sprockets/railtie'
-gem 'bootstrap-sass', '~> 3.3.5'
+gem 'sprockets-rails'
+# gem 'sprockets-rails', :require => 'sprockets/railtie'
+# gem 'bootstrap-sass', '~> 3.3.5'
 gem 'sass-rails', '>= 3.2'
 
 gem 'jbuilder', '~> 2.0'
