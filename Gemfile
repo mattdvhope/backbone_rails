@@ -9,6 +9,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 
 gem 'bower-rails'
+gem 'handlebars_assets'
 
 gem 'sprockets-rails'
 # gem 'sprockets-rails', :require => 'sprockets/railtie'
