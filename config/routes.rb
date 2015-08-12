@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  # root to: "examples#index"
+  root to: "examples#index"
 
-  # resources :examples
+  resources :examples
 
 end

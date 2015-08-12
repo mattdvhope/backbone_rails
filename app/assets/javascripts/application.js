@@ -1,6 +1,6 @@
 //= require jquery
 //= require jquery_ujs
-//= require underscore
+//= require bootstrap-sass-official
 //= require backbone
-//= require bootstrap-sass/assets/javascripts/bootstrap-sprockets
+//= require underscore
 //= require_tree .

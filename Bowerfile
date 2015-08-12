@@ -1,4 +1,4 @@
-asset 'bootstrap'
+asset 'bootstrap-sass-official'
 asset 'backbone'
 
 
