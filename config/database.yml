@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: backbone_rails_development
+  host: localhost
+
+test:
+  <<: *default
+  database: backbone_rails_test
+
+production:
+  <<: *default
+  database: backbone_rails_production
+  username: backbone_rails
+  password: <%= ENV['BACKBONE_RAILS_DATABASE_PASSWORD'] %>
