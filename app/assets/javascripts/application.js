@@ -1,8 +1,8 @@
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap-sass-official
 //= require underscore
 //= require backbone
+//= require bootstrap-sass-official
 //= require turbolinks
 //= require_tree .
 
