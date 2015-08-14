@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  root to: "examples#index"
+  root to: "pages#index"
 
-  resources :examples
+  resources :posts
 
 end

@@ -16,6 +16,7 @@ gem 'sprockets-rails', :require => 'sprockets/railtie'
 # gem 'bootstrap-sass', '~> 3.3.5'
 gem 'sass-rails', '>= 3.2'
 
+gem 'responders'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'paratrooper'
@@ -27,6 +28,7 @@ group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'pry'
 end
 
 group :production do
