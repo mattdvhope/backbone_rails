@@ -4,26 +4,28 @@ class PostsController < ApplicationController
   respond_to :html
 
   def index
-    respond_with @posts = Post.all
+    @posts = Post.all
+    respond_with @posts
   end
 
-  # def show
-  #   respond_with Post.find(params[:id])
-  # end
+  def show
+    @post = Post.find(params[:id])
+    respond_with @post
+  end
 
-  # def create
-  #   respond_with Post.create(post_params)
-  # end
+  def create
+    respond_with Post.create(post_params)
+  end
 
-  # def update
-  #   respond_with Post.update(params[:id], post_params)
-  # end
+  def update
+    respond_with Post.update(params[:id], post_params)
+  end
 
-  # def destroy
-  #   respond_with Post.destroy(params[:id])
-  # end
+  def destroy
+    respond_with Post.destroy(params[:id])
+  end
 
-  # private
+  private
 
     def post_params
       params.require(:post).permit(:title, :body)

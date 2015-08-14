@@ -7,7 +7,21 @@
     urlRoot: appLocation + "/posts"
   });
 
-  console.log(typeof PostModel);
+  var post_1 = new PostModel({ id: 1 });
+
+  // console.log(post_1.toJSON());
+
+  post_1.fetch({ // 'fetch' acts like an 'ajax' success callback ; in this case, it will send all of the properties that are currently on the model ('id' of the 'post_1' model, in this case); the server will then USE that data to look for the particular record that matches those look for the attributes in the JSON url, and send back the whole object back, attaching all of the missing (extra) attributes to that model
+    success: function(model) {
+      console.log(model.toJSON());
+    }
+  });
+
+
+
+
+
+
 
 // };
 
