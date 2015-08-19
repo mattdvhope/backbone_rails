@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
 
   respond_to :json
-  respond_to :html
 
   def index
     @posts = Post.all
@@ -28,7 +27,7 @@ class PostsController < ApplicationController
   private
 
     def post_params
-      params.require(:post).permit(:title, :body)
+      params.require(:post).permit(:user_id, :title, :body)
     end
 
 end

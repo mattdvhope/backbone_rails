@@ -1,0 +1,1 @@
+json.array! @addresses, :id, :user_id, :street, :suite, :city, :zipcode

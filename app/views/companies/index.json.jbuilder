@@ -1,0 +1,1 @@
+json.array! @companies, :id, :user_id, :name, :catch_phrase, :bs

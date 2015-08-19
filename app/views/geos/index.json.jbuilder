@@ -1,0 +1,1 @@
+json.array! @geos, :id, :address_id, :lat, :lng

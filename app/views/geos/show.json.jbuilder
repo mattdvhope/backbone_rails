@@ -1,0 +1,1 @@
+json.(@geo, :id, :address_id, :lat, :lng)
