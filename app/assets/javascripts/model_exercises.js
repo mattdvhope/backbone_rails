@@ -1,7 +1,8 @@
 // var ready; // Done this way to deal with Turbolinks !!!  See... http://stackoverflow.com/questions/18770517/rails-4-how-to-use-document-ready-with-turbo-links
 // ready = function() {
 
-  var appLocation = "http://localhost:3000";
+  // var appLocation = "http://localhost:3000";
+  var appLocation = "http://http://young-bayou-5856.herokuapp.com";
 
   var PostModel = Backbone.Model.extend({
     urlRoot: appLocation + "/posts",
@@ -30,7 +31,7 @@
 
   post_1.fetch();
 
-  
+
 
 // };
 
