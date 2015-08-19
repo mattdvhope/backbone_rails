@@ -2,7 +2,7 @@
 // ready = function() {
 
   // var appLocation = "http://localhost:3000";
-  var appLocation = "http://http://young-bayou-5856.herokuapp.com";
+  var appLocation = "http://young-bayou-5856.herokuapp.com";
 
   var PostModel = Backbone.Model.extend({
     urlRoot: appLocation + "/posts",
