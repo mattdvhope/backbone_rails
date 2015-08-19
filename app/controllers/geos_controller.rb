@@ -1,6 +1,6 @@
 class GeosController < ApplicationController
 
-  respond_to :json
+  respond_to :json, :html
 
   def index
     @geos = Geo.all
