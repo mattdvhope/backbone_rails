@@ -30,20 +30,7 @@
 
   post_1.fetch();
 
-  // function postReceived() { // don't need 'model' argument passed through this function b/c it's the same as this defined model, "post_1".
-  //   user = new UserModel({ id: post_1.get("user_id") });
-  //   // console.log(user.toJSON())
-  //   user.fetch({
-  //     success: setUserToPost
-  //   });
-  // }
-
-  // function setUserToPost() {
-  //   post_1.set("user", user);
-  //   // console.log(post_1.toJSON());
-  // }
-
-  // var user; // ..in postReceived() & setUserToPost()
+  
 
 // };
 
