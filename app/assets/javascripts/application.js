@@ -5,5 +5,5 @@
 //= require handlebars
 //= require bootstrap-sass-official
 //= require turbolinks
-//= require_tree .
+//= require model
 
