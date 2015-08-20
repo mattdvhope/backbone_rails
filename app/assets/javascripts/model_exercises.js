@@ -52,7 +52,7 @@
   console.log(model.toJSON());
     $post.find("header p").text("By " + model.get("user").get("name"));
     $post.find("header + p").text(model.get("body"));
-    $(document.body).append($post);
+    $("script").append($post);
   }
 
 
