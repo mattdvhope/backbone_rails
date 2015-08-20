@@ -18,6 +18,7 @@ gem 'sass-rails', '>= 3.2'
 
 gem 'responders'
 gem 'jbuilder', '~> 2.0'
+gem 'gon'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'paratrooper'
 gem 'figaro'

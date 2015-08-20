@@ -1,15 +1,13 @@
 class GeosController < ApplicationController
 
-  respond_to :json, :html
+  # respond_to :json, :html
 
   def index
     @geos = Geo.all
-    respond_with @geos
   end
 
   def show
     @geo = Geo.find(params[:id])
-    respond_with @geo
   end
 
   def create

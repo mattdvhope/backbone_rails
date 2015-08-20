@@ -1,15 +1,13 @@
 class CompaniesController < ApplicationController
 
-  respond_to :json, :html
+  # respond_to :json, :html
 
   def index
     @companies = Company.all
-    respond_with @companies
   end
 
   def show
     @company = Company.find(params[:id])
-    respond_with @company
   end
 
   def create
