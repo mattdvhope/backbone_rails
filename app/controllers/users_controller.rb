@@ -12,9 +12,9 @@ class UsersController < ApplicationController
     @user = User.create(user_params)
   end
 
-  # def update
-  #   respond_with User.update(params[:id], user_params)
-  # end
+  def update
+    respond_with User.update(params[:id], user_params)
+  end
 
   # def destroy
   #   respond_with User.destroy(params[:id])
