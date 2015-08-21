@@ -1,0 +1,155 @@
+/* line 1, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/page.css */
+html, body {
+  margin: 0;
+  font: normal 14px Helvetica, Arial, sans-serif;
+  color: #402A22;
+  background: #58788C;
+}
+
+/* line 8, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/page.css */
+main {
+  width: 600px;
+  padding: 25px;
+  margin: 0 auto;
+  background: #ffffff;
+}
+
+/* line 15, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/page.css */
+h1 {
+  font-family: Georgia;
+}
+
+/* line 17, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/page.css */
+footer h3 {
+  display: inline-block;
+  padding-right: 10px;
+}
+
+/* line 21, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/page.css */
+footer ul {
+  display: inline-block;
+  padding: 0;
+}
+
+/* line 26, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/page.css */
+footer li {
+  display: inline-block;
+}
+
+/* line 29, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/page.css */
+footer li + li:before {
+  content: ", ";
+}
+
+/* line 33, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/page.css */
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+/* line 39, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/page.css */
+dt {
+  padding: 0 0 5px 0;
+}
+
+/* line 40, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/page.css */
+dd {
+  margin: 0 0 20px 0;
+}
+
+/* line 41, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/page.css */
+label {
+  font-weight: bold;
+}
+
+/* line 42, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/page.css */
+input[type="text"] {
+  width: 100%;
+  height: 28px;
+  padding: 5px;
+  font: normal 13px Helvetica, Arial, sans-serif;
+  border: 1px solid #cecece;
+  border-radius: 6px;
+  background: #ffffff;
+  box-shadow: inset 0 0 8px #ececec;
+  box-sizing: border-box;
+}
+
+/* line 53, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/page.css */
+input[name="quantity"] {
+  width: 50px;
+}
+
+/* line 56, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/page.css */
+input[type="submit"] {
+  padding: 12px 20px;
+  font: normal 13px Helvetica, Arial, sans-serif;
+  color: #e0e0e0;
+  border: none;
+  border-radius: 6px;
+  background: #402A22;
+  cursor: pointer;
+}
+
+/* line 65, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/page.css */
+input[type="submit"]:hover {
+  color: #ffffff;
+  background: #8C6B4F;
+}
+
+/* line 70, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/page.css */
+table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+/* line 75, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/page.css */
+th {
+  padding: 0 5px;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* line 81, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/page.css */
+td {
+  padding: 5px;
+}
+
+/* line 85, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/page.css */
+td a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 24px;
+  height: 24px;
+  text-indent: -8685px;
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 100%;
+  background: #b00b00;
+}
+
+/* line 97, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/page.css */
+td a:after {
+  position: absolute;
+  left: 8px;
+  top: 4px;
+  text-indent: 0;
+  content: "X";
+}
+
+/* line 105, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/page.css */
+tbody tr:nth-of-type(even) td {
+  background: #f0f0f0;
+}
+
+/* line 109, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/page.css */
+p {
+  text-align: right;
+}
+
+/* line 110, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/page.css */
+p a {
+  color: #58788C;
+}
