@@ -2,6 +2,8 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    # gon.users = User.all
+    # gon.jbuilder
   end
 
   def show
