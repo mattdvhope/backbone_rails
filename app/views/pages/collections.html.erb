@@ -1,0 +1,14 @@
+<script id="users" type="text/template">
+  {{#each users}}
+  <article id="user_{{id}}">
+    <h1><a href="http://{{website}}">{{name}}</a></h1>
+    <h2><a href="mailto:{{email}}">{{email}}</a></h2>
+    <dl>
+      <dt>User name</dt>
+      <dd>{{username}}</dd>
+      <dt>Company</dt>
+      <dd>{{company.name}}</dd>
+    </dl>
+  </article>
+  {{/each}}
+</script>

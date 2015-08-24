@@ -1,98 +1,100 @@
-var PostModel = Backbone.Model.extend({
-  // url: "http://localhost:3000/posts.json",
-  url: "http://jsonplaceholder.typicode.com/posts",
+var template = Handlebars.compile($("#users").html());
 
-  initialize: function() {
-    if (!this.get("id")) {
-      this.set("id", this.collection.nextID());
+var User = Backbone.NestedAttributesModel.extend({
+  url: "http://localhost:3000/users.json",
+  relations: [
+    {
+      type: 'one',
+      key: 'address',
+      relatedModel: function() { return Address }
+    },
+    {
+      type: 'one',
+      key: 'company',
+      relatedModel: function() { return Company }
     }
-  }
+  ]
 });
 
-var Posts = Backbone.Collection.extend({
-  model: PostModel,
-  url: "http://localhost:3000/posts.json",
-  last_id: 0,
-  setLastID: function() {
-    if (this.isEmpty()) { return; }
+var Address = Backbone.NestedAttributesModel.extend({
+  relations: [
+    {
+      type: 'one',
+      key: 'geo',
+      relatedModel: function() { return Geo }
+    }
+  ]
+});
 
-    this.last_id = this.last().get("id");
-  },
-  nextID: function() {
-    return ++this.last_id;
+var Geo = Backbone.NestedAttributesModel.extend({});
+
+var Company = Backbone.NestedAttributesModel.extend({});
+
+
+var Users = Backbone.Collection.extend({
+  url: "http://localhost:3000/users.json",
+  model: User,
+  parse: function(response) {
+    response.forEach(function(user) {
+      user.company_name = user.company.name;
+      user.catchPhrase = user.company.catch_phrase;
+      user.company_bs = user.company.bs;
+      delete user.company;
+    });
+
+    return response;
   },
   initialize: function() {
-    this.on("sync", this.setLastID);
-  }
+    this.on("sync sort", renderCollection); // in 'blog_writers.fetch();' below, we don't have to put anything into the 'fetch()' b/c we have an event listening to the "sync" event
+  }  // the "sync" event fires the 'renderCollection()' method
 });
 
-var blog_roll = new Posts();
-// console.log(blog_roll.toJSON());
+var blog_writers = new Users();
 
-blog_roll.fetch({
-  reset: true,
-  success: function(collection) {
-    // console.log(blog_roll.toJSON());
-  }
-});
+blog_writers.fetch();
 
-blog_roll.set({
-  id: 1,
-  user_id: 1,
-  title: "My 1st Post",
-  body: "This is my 1st Post!!!"
-});
-
-var first_post = blog_roll.get(1);
-
-// console.log(first_post.toJSON());
-
-var new_post = blog_roll.create({
-  title: "New Blog Post",
-  body: "Latest New Blog Post is here!!",
-  user_id: 101
-});
-
-// after the request completes
-// console.log(new_post.get("id"));
-// console.log(new_post.toJSON());
-
-var posts_by_author_1 = blog_roll.where({ user_id: 1 });
-// console.log(posts_by_author_1);
-
-console.log(blog_roll.first().toJSON()); // id: 1
-blog_roll.comparator = "title";
-blog_roll.sort();
-console.log(blog_roll.first().toJSON()); // id: 30
+function renderCollection() {
+  document.body.innerHTML = template({ users: blog_writers.toJSON() }); // 'users' from {{#each users}} in Handlebars html <script> tag
+}
 
 
 
-
-var User = Backbone.Model.extend({}),
-    Users = Backbone.Collection.extend({
-      model: User
-    }),
-    blog_authors;
-
-blog_authors = new Users();
-blog_authors.reset(users_data);
-
-var authors = [];
-
-         // 'models' is a Backbone method which gives our collection an array of its models
-blog_authors.models.forEach(function(model) {
-  authors.push(model.toJSON());
-});
-
-// console.log(authors);
-
-
-
-
-
-
-
-
+    // blog_writers.create({
+    //   name: "Mark Malloy",
+    //   username: "Mark",
+    //   email: "mark@test.tv",
+    //   phone: "555-7777",
+    //   website: "www.mark.tv",
+    //   address:
+    //     {
+    //       street: "that there street",
+    //       suite: "that there suite",
+    //       city: "that there CITY",
+    //       zipcode: "that there ZIP",
+    //       geo:
+    //       {
+    //         lat: "-37.3159",
+    //         lng: "81.1496"
+    //       }
+    //     },
+    //   company:
+    //     {
+    //       name: "Mark's Company!!",
+    //       catchphrase: "Multi-hued client-server neural-net",
+    //       bs: "harness real-time e-markets"
+    //     }
+    // }, {
+    //     nested: true,
+    //     patch: true,      
+    //     success: function() {
+    //       blog_writers.fetch({
+    //         reset: true,
+    //         success: function() {
+    //           console.log(blog_writers.toJSON());
+    //         }
+    //       });
+    //     }
+    // });
 
 
 

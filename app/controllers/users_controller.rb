@@ -11,11 +11,20 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(user_params)
+    @user = User.new(user_params)
+    geo = Geo.new(address_params[:geo_attributes])
+    address = Address.new(address_params)
+    address.geo = geo
+    company = Company.new(company_params)
+    @user.address = address
+    @user.company = company
+    @user.save
+    redirect_to user_path(@user)
   end
 
   def update
-    respond_with User.update(params[:id], user_params)
+binding.pry
+    # respond_with User .update(params[:id], user_params)
   end
 
   # def destroy
@@ -26,6 +35,14 @@ class UsersController < ApplicationController
 
     def user_params
       params.require(:user).permit(:name, :username, :email, :phone, :website)
+    end
+
+    def address_params
+      params.require(:address_attributes).permit(:street, :suite, :city, :zipcode)
+    end
+
+    def company_params
+      params.require(:company_attributes).permit(:name, :catchPhrase, :bs)
     end
 
 end
