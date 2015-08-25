@@ -15,7 +15,7 @@
     <fieldset>
       <dl>
         <dt><label for="name">Name</label></dt>
-        <dd><input type="text" name="name" /></dd>
+        <dd><input id="focused" type="text" name="name" autofocus/></dd>
         <dt><label for="quantity">Quantity</label></dt>
         <dd><input type="text" name="quantity" /></dd>
       </dl>
@@ -26,9 +26,7 @@
 
 <script id="items" type="text/x-handlebars">
   {{#each items}}
-    {{#with attributes}}
     {{> item}}
-    {{/with}}
   {{/each}}
 </script>
 

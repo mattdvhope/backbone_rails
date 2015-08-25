@@ -7,6 +7,5 @@
 //= require bootstrap-sass-official
 //= require turbolinks
 
-//= require users
 //= require models_collection
 
