@@ -11,9 +11,11 @@ var App = {
 var ItemModel = Backbone.Model.extend({
   url: function() {
         if (encodeURIComponent(this.id) === "undefined") {
-          return "http://localhost:3000/items.json";
+          // return "http://localhost:3000/items.json";
+          return "http://young-bayou-5856.herokuapp.com/items.json";
         } else {
-          return "http://localhost:3000/items/" + encodeURIComponent(this.id) + ".json";
+          // return "http://localhost:3000/items/" + encodeURIComponent(this.id) + ".json";
+          return "http://young-bayou-5856.herokuapp.com/items/" + encodeURIComponent(this.id) + ".json";
         }
   },
   idAttribute: "id",
@@ -62,7 +64,8 @@ var ItemsView = Backbone.View.extend({
 });
 
 var ItemsCollection = Backbone.Collection.extend({
-  url: "http://localhost:3000/items.json",
+  // url: "http://localhost:3000/items.json",
+  url: "http://young-bayou-5856.herokuapp.com/items.json",
   last_id: 0,
   model: ItemModel,
   incrementID: function() {
