@@ -17,10 +17,23 @@ var map = {
     $(document.body).html($img); // 
   },
   build: function(position) { // build an image with this
+    console.log(this);
     this.position = position;
     this.buildImage();
+    // weather.get();
   }
 };
+
+// var weather = {
+//   endpoint: "http://api.openweathermap.org/data/2.5/weather",
+//   get: function() { // this is the  ajax call
+//     var dfd = $.ajax({ // the ajax method returns a "deferred" object, thus 'dfd' (common in jQuery usage)
+//       url: this.endpoint + "?lat=" + map.position.coords.latitude + "&lon=" + map.position.coords.longitude,
+//       dataType: "json"
+//     });
+//     dfd.done(function(json) { console.log(json); });
+//   }
+// };
 
 navigator.geolocation.getCurrentPosition(map.build.bind(map)); // use 'bind' b/c we don't want the context to be the window object
 
