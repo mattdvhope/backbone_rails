@@ -5,7 +5,6 @@
 //= require handlebars
 //= require backbone-nested-attributes/all
 //= require bootstrap-sass-official
-//= require turbolinks
 
 //= require history
 
