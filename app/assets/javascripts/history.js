@@ -8,11 +8,6 @@
 
     switchPage(idx);
 
-    console.log(idx);
-    console.log($e.text());
-
-    console.log(window.history);
-
     window.history.pushState({ idx: idx }, $e.text(), idx); // actually don't need the 'window' object explicitely here ...see https://developer.mozilla.org/en-US/docs/Web/API/History_API {
   });
 
@@ -21,8 +16,6 @@
     var state = e.originalEvent.state;
 
     console.log("in popstate!!!");
-    console.log(window.history);
-    console.log(state);
 
     switchPage(state === null ? "#page_1" : state.idx);
   });
