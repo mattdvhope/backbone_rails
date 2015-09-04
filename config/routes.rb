@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   # root to: "pages#index" 
 
-  root to: "geolocations#index" 
+  root to: "histories#index" 
 
   resources :items
 

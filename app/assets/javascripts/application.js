@@ -7,5 +7,5 @@
 //= require bootstrap-sass-official
 //= require turbolinks
 
-//= require geolocation
+//= require history
 
