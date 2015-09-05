@@ -1,0 +1,34 @@
+  function sayHI() {
+    worker.postMessage({'cmd': 'start', 'msg': 'Hi'});
+  }
+
+  function stop() {
+    // worker.terminate() from this script would also stop the worker.
+    worker.postMessage({'cmd': 'stop', 'msg': 'Bye'});
+  }
+
+  function unknownCmd() {
+    worker.postMessage({'cmd': 'foobard', 'msg': '???'});
+  }
+
+  var worker = new Worker("<%= javascript_path 'task.js' %>");
+
+  worker.addEventListener('message', function(e) {
+    document.getElementById('result').textContent = e.data;
+  }, false);
+
+
+
+
+// var worker = new Worker("<%= javascript_path 'task.js' %>");
+
+// worker.addEventListener('message', function(e) {
+//   console.log('Worker said: ', e.data);
+// }, false);
+
+// worker.postMessage('Hello World'); // Send data to our worker.
+
+console.log(worker);
+
+
+
