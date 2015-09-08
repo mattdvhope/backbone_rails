@@ -4,8 +4,6 @@ Rails.application.routes.draw do
 
   root to: "workers#index" 
 
-  get '/task.js', to: 'workers#tasks'
-
   resources :items
 
   resources :users
