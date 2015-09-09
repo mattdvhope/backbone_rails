@@ -1,0 +1,57 @@
+var workers = {
+  inverter: new Worker("<%= javascript_path 'images/inverter.js' %>"),
+  horiz_flipper: new Worker("<%= javascript_path 'images/horiz_flipper.js' %>"),
+  vert_flipper: new Worker("<%= javascript_path 'images/vert_flipper.js' %>"),
+  brightness: new Worker("<%= javascript_path 'images/brightness.js' %>"),
+  saturation: new Worker("<%= javascript_path 'images/saturation.js' %>")
+}
+
+// We're waiting until window load rather than "document ready" because "document ready" is only telling us that the HTML is rendered, but any requests for images might still be pending. We need to wait for 'window' to load in order to get the images' width and height.
+$(window).on("load", function() {
+  var canvas = $("canvas").get(0), // need DOM elements rather than the jQuery objects
+      img = $("img").remove().get(0), // we remove b/c we don't want to see 2 of the same image
+      ctx = canvas.getContext("2d"); // 'ctx' refers to the 2-dimensional rendering context
+
+  console.log(canvas);
+  console.log(img);
+  console.log(ctx);
+
+  canvas.width = img.width;
+  canvas.height = img.height;
+  ctx.drawImage(img, 0, 0);
+
+  for (var prop in workers) {
+    workers[prop].addEventListener("message", function(message) {
+      putData(ctx, message.data.image_data);
+    });
+  }
+
+  $("#tools").on("click", "a", function(e) {
+    e.preventDefault();
+    var data = { image_data: getData(ctx) },
+        worker = workers[$(e.target).attr("converter")];
+
+    worker.postMessage(data);
+  });
+
+  function getData(ctx) {
+    return ctx.getImageData(0, 0, ctx.canvas.width, ctx.canvas.height);
+  }
+
+  function putData(ctx, data) {
+    ctx.putImageData(data, 0, 0);
+  }
+
+});
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,8 +1,17 @@
-<figure>
-  <%= image_tag "Brazil_mountains.jpg" %>
-  <figcaption>&copy; By Carlos Perez Couto</figcaption>
-</figure>
-
+<%= image_tag "Brazil_mountains.jpg" %>
+<canvas></canvas>
+<figcaption>&copy; By Carlos Perez Couto</figcaption>
+<dl>
+  <dt>Brightness</dt>
+  <dd><input type="range" name="brightness" val="0" min="-50" max="50" step="1"><span>0%</span></dd>
+  <dt>Saturation</dt>
+  <dd><input type="range" name="saturation" val="0" min="-100" max="100" step="1"><span>0%</span></dd>
+</dl>
+<ul id="tools">
+  <li><%= link_to("Invert", "#", converter: "inverter") %></li>
+  <li><%= link_to("Horizontal Flip", "#", converter: "horiz_flipper") %></li>
+  <li><%= link_to("Vertical Flip", "#", converter: "vert_flipper") %></li>
+</ul>
 
 
 
