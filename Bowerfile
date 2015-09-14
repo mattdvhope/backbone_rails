@@ -1,6 +1,6 @@
 asset 'bootstrap-sass-official'
 asset 'backbone'
 asset 'jshint'
-
+asset 'jasmine'
 
 
