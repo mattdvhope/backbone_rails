@@ -4,21 +4,25 @@ var workers = {
   vert_flipper: new Worker("<%= javascript_path 'images/vert_flipper.js' %>"),
   brightness: new Worker("<%= javascript_path 'images/brightness.js' %>"),
   saturation: new Worker("<%= javascript_path 'images/saturation.js' %>")
-}
+};
 
 // We're waiting until window load rather than "document ready" because "document ready" is only telling us that the HTML is rendered, but any requests for images might still be pending. We need to wait for 'window' to load in order to get the images' width and height.
 $(window).on("load", function() {
+  // console.log($("canvas"));
+  // console.log($("img"));
   var canvas = $("canvas").get(0), // need DOM elements rather than the jQuery objects
       img = $("img").remove().get(0), // we remove b/c we don't want to see 2 of the same image
-      ctx = canvas.getContext("2d"); // 'ctx' refers to the 2-dimensional rendering context
+      ctx = canvas.getContext("2d"), // 'ctx' refers to the 2-dimensional rendering context
+      last_data;
 
-  console.log(canvas);
-  console.log(img);
-  console.log(ctx);
+  // console.log(canvas);
+  // console.log(img);
+  // console.log(ctx);
 
   canvas.width = img.width;
   canvas.height = img.height;
   ctx.drawImage(img, 0, 0);
+  last_data = getData(ctx);
 
   for (var prop in workers) {
     workers[prop].addEventListener("message", function(message) {
@@ -30,6 +34,20 @@ $(window).on("load", function() {
     e.preventDefault();
     var data = { image_data: getData(ctx) },
         worker = workers[$(e.target).attr("converter")];
+
+    worker.postMessage(data);
+    worker.addEventListener("message", function(message) { // this 'addEventListener' enables us to retain the brighness/saturation settings even if we add a click event
+      last_data = message.data.image_data;
+      worker.removeEventListener("message", message); // if we pass in the 'message', it knows to just remove that one message and not the one that already exists
+    });
+  });
+
+  $("input[type=range]").on("input", function() {
+    var $e = $(this),
+        data = { image_data: last_data, param: $e.val() },
+        worker = workers[$e.attr("name")];
+
+    $e.next("span").text($e.val() + "%");
 
     worker.postMessage(data);
   });
