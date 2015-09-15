@@ -3,7 +3,6 @@
   "dependencies": {
     "bootstrap-sass-official": "latest",
     "backbone": "latest",
-    "jshint": "latest",
-    "jasmine": "latest"
+    "jshint": "latest"
   }
 }

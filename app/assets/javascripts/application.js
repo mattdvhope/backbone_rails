@@ -6,5 +6,5 @@
 //= require backbone-nested-attributes/all
 //= require bootstrap-sass-official
 
-//= require worker_images
+//= require jasmine_work
 

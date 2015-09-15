@@ -80,6 +80,12 @@ GEM
       excon (~> 0.44)
       multi_json (~> 1.8)
     i18n (0.7.0)
+    jasmine (2.3.0)
+      jasmine-core (~> 2.3)
+      phantomjs
+      rack (>= 1.2.1)
+      rake
+    jasmine-core (2.3.4)
     jbuilder (2.3.1)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -106,6 +112,7 @@ GEM
       netrc (~> 0.7)
       rendezvous (~> 0.0.1)
     pg (0.18.2)
+    phantomjs (1.9.8.0)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -194,6 +201,7 @@ DEPENDENCIES
   figaro
   gon
   handlebars_assets
+  jasmine
   jbuilder (~> 2.0)
   jquery-rails
   paratrooper
