@@ -32,6 +32,7 @@ group :development, :test do
   gem 'spring'
   gem 'pry'
   gem 'phantomjs'
+  gem 'coffee-rails'
   gem "teaspoon-jasmine"
 end
 
