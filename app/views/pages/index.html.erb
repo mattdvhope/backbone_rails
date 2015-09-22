@@ -1,0 +1,12 @@
+<main id="posts">
+  <p>Loading posts</p>
+</main>
+
+<script id="posts_template" type="text/x-handlebars">
+  {{#each posts}}
+  <article id="post_{{id}}">
+    <h1>{{title}}</h1>
+    <p>{{body}}</p>
+  </article>
+  {{/each}}
+</script>
