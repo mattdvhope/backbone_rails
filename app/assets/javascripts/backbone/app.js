@@ -7,6 +7,7 @@ var App = {
   albumsLoaded: function() { },
   fetchAlbums: function() {
     this.albums = new Albums();
+    console.log(this.albums);
     this.albums.fetch({
       success: this.albumsLoaded.bind(this)
     });
