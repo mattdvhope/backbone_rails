@@ -143,9 +143,9 @@ Company.create(user_id: 8, name: "Abernathy Group", catch_phrase: "Implemented s
 Company.create(user_id: 9, name: "Yost and Sons", catch_phrase: "Switchable contextually-based project", bs: "aggregate real-time technologies")
 Company.create(user_id: 10, name: "Hoeger LLC", catch_phrase: "Centralized empowering task-force", bs: "target end-to-end models")
 
-Album.create(artist: "Tori Kelly", title: "Unbreakable Smile (Bonus Track Version)", url: "https://itunes.apple.com/us/album/unbreakable-smile-bonus-track/id988591612?v0=WWW-NAUS-ITSTOP100-ALBUMS&l=en&ign-mpt=uo%3D4", date: "Jun 23, 2015", cover: "http://a5.mzstatic.com/us/r30/Music5/v4/83/10/90/83109037-0c67-bf88-a2c5-a022b21de7d7/cover170x170.jpeg")
-Album.create(artist: "Taylor Swift", title: "1989", url: "https://itunes.apple.com/us/album/1989/id907242701?v0=WWW-NAUS-ITSTOP100-ALBUMS&l=en&ign-mpt=uo%3D4", date: "Oct 27, 2014", cover: "http://a3.mzstatic.com/us/r30/Music5/v4/29/fa/b6/29fab67f-c950-826f-26a0-5eebcd0e262b/cover170x170.jpeg")
-Album.create(artist: "Breaking Benjamin", title: "Dark Before Dawn", url: "https://itunes.apple.com/us/album/dark-before-dawn/id975950518?v0=WWW-NAUS-ITSTOP100-ALBUMS&l=en&ign-mpt=uo%3D4", date: "Jun 23, 2015", cover: "http://a3.mzstatic.com/us/r30/Music1/v4/20/7d/35/207d354b-c1e7-c199-d363-9269d0be9376/cover170x170.jpeg")
+Album.create(artist: "2nd Chapter of Acts", title: "With Footnotes", url: "https://itunes.apple.com/us/album/unbreakable-smile-bonus-track/id988591612?v0=WWW-NAUS-ITSTOP100-ALBUMS&l=en&ign-mpt=uo%3D4", date: "Jun 23, 2015", cover: "https://s3-ap-southeast-1.amazonaws.com/ccmcoversbsc/2nd+Chapter.png")
+Album.create(artist: "Keith Green", title: "Collection", url: "https://itunes.apple.com/us/album/1989/id907242701?v0=WWW-NAUS-ITSTOP100-ALBUMS&l=en&ign-mpt=uo%3D4", date: "Oct 27, 2014", cover: "https://s3-ap-southeast-1.amazonaws.com/ccmcoversbsc/Keith+Green.png")
+Album.create(artist: "Rich Mullins", title: "Songs", url: "https://itunes.apple.com/us/album/dark-before-dawn/id975950518?v0=WWW-NAUS-ITSTOP100-ALBUMS&l=en&ign-mpt=uo%3D4", date: "Jun 23, 2015", cover: "https://s3-ap-southeast-1.amazonaws.com/ccmcoversbsc/Rich+Mullins.png")
 
 Song.create(album_id: 1, title: "Where I Belong", length: "1:27")
 Song.create(album_id: 1, title: "Unbreakable Smile", length: "3:48")
