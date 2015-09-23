@@ -4,10 +4,12 @@
 //= require_tree ./routers
 
 var App = {
-  albumsLoaded: function() { },
+  albumsLoaded: function() {
+    this.view.render();
+  },
   fetchAlbums: function() {
     this.albums = new Albums();
-    console.log(this.albums);
+    this.view = new AlbumsView({ collection: this.albums });
     this.albums.fetch({
       success: this.albumsLoaded.bind(this)
     });
@@ -17,6 +19,7 @@ var App = {
   }
 };
 
+App.init();
 
 
 
