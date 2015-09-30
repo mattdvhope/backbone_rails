@@ -1,3 +1,5 @@
-MagicLamp.fixture(controller: PagesController) do
-  render template: "pages/index"
+MagicLamp.define(controller: PagesController) do
+  fixture do
+    render template: "pages/index"
+  end
 end
