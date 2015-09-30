@@ -34,6 +34,7 @@
 // For more information: http://github.com/modeset/teaspoon
 
 //= require scaffolding/albums_scaffold
+//= require scaffolding/songs_scaffold
 
 //= require jasmine-jquery
 
