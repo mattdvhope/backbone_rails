@@ -5,7 +5,8 @@ class AlbumsController < ApplicationController
   end
 
   def show
-    @album = Album.find(params[:id])
+    @album = Album.find_by_title(params[:title])
+binding.pry
   end
 
 end

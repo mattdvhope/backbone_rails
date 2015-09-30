@@ -9,6 +9,7 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'turbolinks' 
 gem 'jquery-rails'
 
+gem 'ejs'
 gem 'bower-rails'
 gem 'handlebars_assets'
 gem 'backbone-nested-attributes'
@@ -31,9 +32,11 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'pry'
+  # gem 'coffee-rails'
+  gem 'database_cleaner'
   gem 'phantomjs'
-  gem 'coffee-rails'
   gem "teaspoon-jasmine"
+  gem "magic_lamp"
 end
 
 group :production do

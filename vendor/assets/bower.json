@@ -1,6 +1,7 @@
 {
   "name": "dsl-generated dependencies",
   "dependencies": {
+    "jasmine-jquery": "latest",
     "bootstrap-sass-official": "latest",
     "backbone": "latest",
     "jshint": "latest"

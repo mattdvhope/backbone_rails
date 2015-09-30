@@ -1,3 +1,4 @@
+asset 'jasmine-jquery'
 asset 'bootstrap-sass-official'
 asset 'backbone'
 asset 'jshint'
