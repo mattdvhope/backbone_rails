@@ -3,7 +3,7 @@ describe('Albums View', function() {
   beforeEach(function() {
     MagicLamp.load("pages/index");
     this.view = new AlbumsView({ // anything attached to 'this' will be accessible within our test statements
-      collection: albums_scaffold // in helpers folder
+      collection: albums_scaffold // in scaffolding folder
     });
   });
 
