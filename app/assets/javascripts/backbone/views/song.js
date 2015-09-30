@@ -19,7 +19,8 @@ var SongsView = Backbone.View.extend({
   },
   render: function() {
     this.$el.html(this.template({
-      songs: this.collection.toJSON(),
+      // songs: this.collection.toJSON(),
+      songs: this.collection.models[0].toJSON().songs,
       album: this.album
     }));
     this.open(); // to fade the overlay in...
