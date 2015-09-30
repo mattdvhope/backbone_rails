@@ -1,6 +1,12 @@
 var $overlay = $("#overlay");
 
 var SongsView = Backbone.View.extend({
+  attributes: { // set of HTML attributes added to the parent view element
+    id: "songs_modal"
+  },
+  events: { // specify an 'events' object to activate 'Close' link
+    "click a.close": "close" // when 'a.close' is clicked, the 'close' method (below) is called
+  },
   duration: 300,
   template:  HandlebarsTemplates['songs/each_song'],
   open: function () {
