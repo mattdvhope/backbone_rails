@@ -33,6 +33,8 @@
 //
 // For more information: http://github.com/modeset/teaspoon
 
+//= require helpers/albums_scaffold
+
 //= require jasmine-jquery
 
 MagicLamp.preload();
