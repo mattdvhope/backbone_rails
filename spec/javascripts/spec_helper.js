@@ -33,7 +33,7 @@
 //
 // For more information: http://github.com/modeset/teaspoon
 
-//= require helpers/albums_scaffold
+//= require scaffolding/albums_scaffold
 
 //= require jasmine-jquery
 
