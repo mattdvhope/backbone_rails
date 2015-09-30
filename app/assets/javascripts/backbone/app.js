@@ -29,7 +29,7 @@ var App = {
       url: "/albums/" + name + ".json"
     }))();
 
-    this.selected_album = this.albums.findWhere({ name: name });
+    this.selected_album = this.albums.findWhere({ title: name });
 
     songs.fetch({
       success: this.songsLoaded.bind(this)
