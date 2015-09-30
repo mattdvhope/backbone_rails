@@ -16,7 +16,7 @@ var App = {
     });
   },
   songsLoaded: function(songs) {
-    var songs_modal = new SongsView({
+    var songs_modal = new SongsView({ // 'songs_modal' is the album icon w/ its songs/song-lengths listed under it
       collection: songs,
       album: this.selected_album.toJSON()
     });
