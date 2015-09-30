@@ -5,7 +5,11 @@ class AlbumsController < ApplicationController
   end
 
   def show
-    @album = Album.find_by_title(params[:id]) # "id"=>"Album Title/name"
+    if @album = Album.find_by_title(params[:id]) # "id"=>"Album title"
+      @album
+    else
+      @album = Album.find(params[:id]) # "id"=>"Album id"
+    end
   end
 
 end
