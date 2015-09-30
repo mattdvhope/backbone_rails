@@ -40,32 +40,15 @@ var App = {
   }
 };
 
-var Router = Backbone.Router.extend({
-  routes: {
-    "albums/:name": "getAlbum"
-  },
-  getAlbum: function(name) {
-    App.fetchSongs(name);
-  },
-  index: function() {
-    if (!App.songs.$el.is(":animated")) {
-      App.songs.fadeOut();
-    }
-  },
-  initialize: function() {
-    this.route(/^\/?$/, "index", this.index);
-  }
-});
-
 var router = new Router();
 
 Backbone.history.start({
-  pushState: true,
-  silent: true
+  pushState: true, // use 'pushState' to get rid of the '#' in the URL
+  silent: true // If the server has already rendered the entire page, and you don't want the initial route to trigger when starting History, pass silent: true.
 });
 
 $(document).on("click", "a[href^='/']", function(e) {
-  e.preventDefault(); // "trigger: true" (below) will call the 'route' function in the 'initialize' method
+  e.preventDefault();     // "trigger: true" (below) will call the 'route' function in the 'initialize' method
   router.navigate($(e.currentTarget).attr("href").replace(/^\//, ""), { trigger: true } );
 });
 
