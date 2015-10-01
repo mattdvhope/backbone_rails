@@ -55,17 +55,18 @@ summary::-webkit-details-marker {
   display: none;
 }
 
-/* line 28, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+/*Whitepsace Reset code above*/
+/* line 30, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
 html, body {
   background: #DADAFF;
 }
 
-/* line 32, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+/* line 34, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
 body {
   font: normal 14px "Roboto Condensed", sans-serif;
 }
 
-/* line 36, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+/* line 38, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
 main {
   max-width: 800px;
   padding: 20px;
@@ -73,7 +74,7 @@ main {
   background: #f5f6d4;
 }
 
-/* line 43, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+/* line 45, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
 h1 {
   padding: 0 0 .6em 0;
   font-size: 2.2em;
@@ -81,17 +82,17 @@ h1 {
   color: #493f0b;
 }
 
-/* line 49, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+/* line 51, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
 h2 {
   font-size: 1.5em;
 }
 
-/* line 53, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+/* line 55, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
 h3 {
   font-size: 1.2em;
 }
 
-/* line 57, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+/* line 59, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
 #albums li {
   display: inline-block;
   width: 25%;
@@ -100,21 +101,21 @@ h3 {
   box-sizing: border-box;
 }
 
-/* line 65, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+/* line 67, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
 #albums img {
   display: block;
   width: 100%;
   margin: 0 0 10px 0;
 }
 
-/* line 71, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+/* line 73, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
 #albums a {
   display: block;
   text-decoration: none;
   color: inherit;
 }
 
-/* line 77, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+/* line 79, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
 #songs_modal {
   display: none;
   position: fixed;
@@ -127,7 +128,7 @@ h3 {
   background: #f5f6d4;
 }
 
-/* line 89, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+/* line 91, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
 #songs_modal a.close {
   position: absolute;
   top: 25px;
@@ -136,46 +137,46 @@ h3 {
   color: #a7c520;
 }
 
-/* line 97, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+/* line 99, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
 #songs_modal img {
   float: left;
   width: 80px;
   margin: 0 10px 10px 0;
 }
 
-/* line 102, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+/* line 104, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
 #songs_modal h2 {
   padding: 0 0 10px 0;
 }
 
-/* line 105, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+/* line 107, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
 #songs_modal h3 {
   padding: 0 0 5px 0;
 }
 
-/* line 108, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+/* line 110, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
 #songs_modal ol {
   clear: both;
   /*clear the left floated image*/
   list-style: decimal inside;
 }
 
-/* line 112, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+/* line 114, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
 #songs_modal li {
   padding: 7px 0;
 }
 
-/* line 115, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+/* line 117, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
 #songs_modal li {
   border-bottom: 1px solid #a7c520;
 }
 
-/* line 118, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+/* line 120, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
 #songs_modal small {
   float: right;
 }
 
-/* line 123, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+/* line 125, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
 #overlay {
   display: none;
   position: fixed;
