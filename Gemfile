@@ -32,7 +32,7 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'pry'
-  # gem 'coffee-rails'
+  gem 'coffee-rails'
   gem 'database_cleaner'
   gem 'phantomjs'
   gem "teaspoon-jasmine"
