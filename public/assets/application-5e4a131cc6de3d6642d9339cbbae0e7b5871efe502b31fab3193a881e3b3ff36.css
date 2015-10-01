@@ -1,0 +1,188 @@
+/*@import url("whitespace-reset.css");*/
+/*
+----------------------------------------
+Tantek Celik's Whitepsace Reset
+     Author:    Tantek Celik, Shane Riley
+    Version:    (CC) 2010 Some Rights Reserved - http://creativecommons.org/licenses/by/2.0
+Description:  Resets default styling of common browsers to a common base
+----------------------------------------
+*/
+@import url("http://fonts.googleapis.com/css?family=Roboto+Condensed");
+/* line 11, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+ul, ol {
+  list-style: none;
+}
+
+/* line 12, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+h1, h2, h3, h4, h5, h6, pre, code {
+  font-size: 1em;
+}
+
+/* line 13, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote, fieldset, input, dl, dt, dd, figure, figcaption {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 16, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+a img, :link img, :visited img, fieldset {
+  border: none;
+}
+
+/* line 17, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+address {
+  font-style: normal;
+}
+
+/* line 18, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+header, section, article, nav, footer, hgroup, details, summary, figure, main {
+  display: block;
+}
+
+/* line 19, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+mark {
+  color: inherit;
+  background: transparent;
+}
+
+/* line 22, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+abbr {
+  border: none;
+}
+
+/* line 23, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* line 28, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+html, body {
+  background: #DADAFF;
+}
+
+/* line 32, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+body {
+  font: normal 14px "Roboto Condensed", sans-serif;
+}
+
+/* line 36, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+main {
+  max-width: 800px;
+  padding: 20px;
+  margin: 0 auto;
+  background: #f5f6d4;
+}
+
+/* line 43, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+h1 {
+  padding: 0 0 .6em 0;
+  font-size: 2.2em;
+  /*2.2 bigger than the nearest parent*/
+  color: #493f0b;
+}
+
+/* line 49, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+h2 {
+  font-size: 1.5em;
+}
+
+/* line 53, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+h3 {
+  font-size: 1.2em;
+}
+
+/* line 57, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+#albums li {
+  display: inline-block;
+  width: 25%;
+  padding: 0 10px 10px 0;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+/* line 65, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+#albums img {
+  display: block;
+  width: 100%;
+  margin: 0 0 10px 0;
+}
+
+/* line 71, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+#albums a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* line 77, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+#songs_modal {
+  display: none;
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  bottom: 25px;
+  left: 25px;
+  padding: 25px;
+  z-index: 10;
+  background: #f5f6d4;
+}
+
+/* line 89, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+#songs_modal a.close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 1;
+  color: #a7c520;
+}
+
+/* line 97, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+#songs_modal img {
+  float: left;
+  width: 80px;
+  margin: 0 10px 10px 0;
+}
+
+/* line 102, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+#songs_modal h2 {
+  padding: 0 0 10px 0;
+}
+
+/* line 105, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+#songs_modal h3 {
+  padding: 0 0 5px 0;
+}
+
+/* line 108, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+#songs_modal ol {
+  clear: both;
+  /*clear the left floated image*/
+  list-style: decimal inside;
+}
+
+/* line 112, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+#songs_modal li {
+  padding: 7px 0;
+}
+
+/* line 115, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+#songs_modal li {
+  border-bottom: 1px solid #a7c520;
+}
+
+/* line 118, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+#songs_modal small {
+  float: right;
+}
+
+/* line 123, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/albums.css */
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  background: rgba(0, 0, 0, 0.6);
+}
