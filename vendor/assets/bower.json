@@ -4,6 +4,8 @@
     "jasmine-jquery": "latest",
     "bootstrap-sass-official": "latest",
     "backbone": "latest",
-    "jshint": "latest"
+    "jshint": "latest",
+    "jade": "latest",
+    "stylus": "latest"
   }
 }
