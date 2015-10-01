@@ -22,6 +22,8 @@ mark {
 abbr { border: none; }
 summary::-webkit-details-marker { display: none; }
 
+/*Whitepsace Reset code above*/
+
 
 @import url("http://fonts.googleapis.com/css?family=Roboto+Condensed");
 
