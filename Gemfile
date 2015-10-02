@@ -24,6 +24,7 @@ gem 'gon'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'paratrooper'
 gem 'figaro'
+gem 'stylus'
 
 gem "better_errors"
 

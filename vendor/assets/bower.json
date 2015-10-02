@@ -5,7 +5,6 @@
     "bootstrap-sass-official": "latest",
     "backbone": "latest",
     "jshint": "latest",
-    "jade": "latest",
-    "stylus": "latest"
+    "jade": "latest"
   }
 }
