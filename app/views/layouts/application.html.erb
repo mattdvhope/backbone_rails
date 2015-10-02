@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Web Store</title>
+
+  <% if yield(:title) == "" %>
+    <title>Web Store App</title><!-- ':title' defined in application_helper.rb -->
+  <% else %>
+    <title><%= yield(:title) %></title><!-- ':title' defined in application_helper.rb -->
+  <% end %>
   <%= Gon::Base.render_data %>
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= csrf_meta_tags %>
