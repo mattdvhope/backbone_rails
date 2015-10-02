@@ -192,6 +192,18 @@ Song.create(album_id: 3, title: "Defeated", length: "3:25")
 Song.create(album_id: 3, title: "Dawn", length: "1:52")
 
 
+Product.create(title: "ActRaiser", console: "SNES", release_year: 1991, upc: "719631000036", genre: "Strategy", cover: "snes_actraiser.jpg")
+Product.create(title: "Soul Blazer", console: "SNES", release_year: 1992, upc: "719631000050", genre: "RPG", cover: "snes_soul_blazer.jpg")
+Product.create(title: "Illusion of Gaia", console: "SNES", release_year: 1994, upc: "045496830311", genre: "RPG", cover: "snes_illusion_of_gaia.jpg")
+Product.create(title: "Terranigma", console: "SNES", release_year: 1996, upc: "045496330484", genre: "RPG", cover: "snes_terranigma.jpg")
+Product.create(title: "Ōkami", console: "PlayStation 2", release_year: 2006, upc: "013388260591", genre: "Action/Adventure", cover: "playstation_2_Ōkami.jpg")
+Product.create(title: "Fatal Frame", console: "PlayStation 2", release_year: 2002, upc: "018946010243", genre: "Action/Adventure", cover: "playstation_2_fatal_frame.jpg")
+Product.create(title: "Katamari Damacy", console: "PlayStation 2", release_year: 2004, upc: "722674100243", genre: "Strategy", cover: "playstation_2_katamari_damacy.jpg")
+Product.create(title: "Silent Hill 3", console: "PlayStation 2", release_year: 2003, upc: "083717200529", genre: "Action/Adventure", cover: "playstation_2_silent_hill_3.jpg")
+Product.create(title: "Animal Crossing", console: "GameCube", release_year: 2002, upc: "045496960322", genre: "Simulator", cover: "gamecube_animal_crossing.jpg")
+Product.create(title: "Killer7", console: "GameCube", release_year: 2005, upc: "013388200139", genre: "Shooter", cover: "gamecube_killer7.jpg")
+Product.create(title: "Legend of Zelda, Th: The Wind Waker", console: "GameCube", release_year: 2003, upc: "045496960469", genre: "Action/Adventure", cover: "gamecube_wind_waker.jpg")
+Product.create(title: "Metroid Prime", console: "GameCube", release_year: 2002, upc: "045496960421", genre: "Action/Adventure", cover: "gamecube_metroid_prime.jpg")
 
 
 
