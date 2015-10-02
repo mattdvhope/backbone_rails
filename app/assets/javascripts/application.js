@@ -7,5 +7,5 @@
 //= require bootstrap-sass-official
 //= require jade/runtime
 
-//= require backbone/app
+//= require cart
 
