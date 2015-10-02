@@ -5,9 +5,9 @@
     <h3><a href="#">Cart<span>4</span></a></h3>
     <div id="items">
       <ul>
-        <li>ActRaiser x 1<span>$50.00</span></li>
-        <li>Metroid Prime x 2<span>$21.00</span></li>
-        <li>Silent Hill 3 x 1<span>$25.00</span></li>
+        <% @products.each do |product| %>
+          <li><%= product.title %><span>$50.00</span></li>
+        <% end %>
         <li><strong>Total</strong><span>$96.00</span></li>
       </ul>
       <a href="#">Checkout</a>
