@@ -1,0 +1,120 @@
+/*
+ * https://color.adobe.com/oddend-color-theme-2181/
+ */
+@import "whitespace-reset.css"
+
+@import url("http://fonts.googleapis.com/css?family=Fjalla+One")
+
+html
+  background: #333 url("https://image.freepik.com/free-vector/branches-with-green-leaves-background_23-2147506573.jpg") 0 0 repeat
+
+body
+  background: #333 url("https://image.freepik.com/free-vector/branches-with-green-leaves-background_23-2147506573.jpg") 0 0 repeat
+  font: normal 15px Helvetica, Arial, sans-serif
+
+h1, h2, h3
+  font-family: "Fjalla One", sans-serif
+
+h1
+  padding: 0 0 0.6em 0
+  font-size: 2.5em
+  text-transform: uppercase
+
+h2
+  padding: 0 0 0.75em 0
+  font-size: 1.8em
+
+h3
+  font-size: 1.4em
+
+main
+  max-width: 1200px
+  padding: 20px
+  margin: 0 auto
+  background: rgba(255, 255, 255, 0.95)
+  box-sizing: border-box
+
+h1
+  float: left
+
+#cart
+  position: relative
+  float: right
+  h3 span
+    padding-left: 5px
+
+#items
+  display: none
+  position: absolute
+  right: 0
+  top: 100%
+  z-index: 1
+  width: 200px
+  padding: 8px
+  background: #aeee00
+  ul
+    padding: 0 0 10px 0
+  li
+    + li
+      clear: both
+      padding-top: 5px
+    span
+      float: right
+      font-size: 0.9em
+      font-weight: bold
+  a
+    display: inline-block
+    padding: 8px 15px
+    font: normal 1.3em "Fjalla One", sans-serif
+    text-decoration: none
+    color: #000
+    border: 3px double #01b0f0
+    background: #01b0f0
+    padding: 5px 10px
+    font-size: 0.9em
+    border: none
+
+#products
+  clear: both
+  margin: 0 -10px
+  li
+    display: inline-block
+    width: 16.6%
+    padding: 0 10px 10px 10px
+    vertical-align: top
+    box-sizing: border-box
+  img
+    display: block
+    width: auto
+    max-width: 100%
+    margin: 0 0 10px 0
+  a
+    display: inline-block
+    padding: 8px 15px
+    font: normal 1.3em "Fjalla One", sans-serif
+    text-decoration: none
+    color: #000
+    border: 3px double #01b0f0
+    background: #ff358b
+
+dt
+  font-weight: bold
+
+dd
+  padding: 5px 0 5px 15px
+
+span.logo
+  display: block
+  width: 64px
+  text-indent: -8685px
+  cursor: help
+  background: transparent url("https://s3-ap-southeast-1.amazonaws.com/ccmcoversbsc/logos.jpg") 0 0 no-repeat
+  background-size: 100% auto
+  &.snes
+    height: 44px
+  &.ps2
+    height: 15px
+    background-position: 0 -44px
+  &.gc
+    height: 73px
+    background-position: 0 -59px
