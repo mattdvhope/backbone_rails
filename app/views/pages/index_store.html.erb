@@ -1,0 +1,33 @@
+<% title("Web Store Home") %><!-- 'title' method from application_helper.rb -->
+<main>
+  <h1>Products</h1>
+  <div id="cart">
+    <h3><a href="#">Cart<span>4</span></a></h3>
+    <div id="items">
+      <ul>
+        <% @products.each do |product| %>
+          <li><%= product.title %><span>$50.00</span></li>
+        <% end %>
+        <li><strong>Total</strong><span>$96.00</span></li>
+      </ul>
+      <a href="#">Checkout</a>
+    </div>
+  </div>
+  <ul id="products">
+    <li>
+      <img src="https://s3-ap-southeast-1.amazonaws.com/ccmcoversbsc/snes_actraiser.jpg" />
+      <h2>ActRaiser</h2>
+      <dl>
+        <dt>Console</dt>
+        <dd><span title="SNES" class="logo snes">SNES</span></dd>
+        <dt>Year</dt>
+        <dd>1991</dd>
+        <dt>Genre</dt>
+        <dd>Strategy</dd>
+        <dt>UPC</dt>
+        <dd>719631000036</dd>
+      </dl>
+      <a href="#">Add to cart</a>
+    </li>
+  </ul>
+</main>
