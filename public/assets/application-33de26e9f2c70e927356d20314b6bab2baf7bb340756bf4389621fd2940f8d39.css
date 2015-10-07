@@ -1,0 +1,168 @@
+/* https://color.adobe.com/oddend-color-theme-2181/
+ */
+@import url(whitespace-reset.css);
+@import url("http://fonts.googleapis.com/css?family=Fjalla+One");
+/* line 9, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/web_store_sass.sass */
+html {
+  background: #333 url("https://image.freepik.com/free-vector/branches-with-green-leaves-background_23-2147506573.jpg") 0 0 repeat;
+}
+
+/* line 12, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/web_store_sass.sass */
+body {
+  background: #333 url("https://image.freepik.com/free-vector/branches-with-green-leaves-background_23-2147506573.jpg") 0 0 repeat;
+  font: normal 15px Helvetica, Arial, sans-serif;
+}
+
+/* line 16, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/web_store_sass.sass */
+h1, h2, h3 {
+  font-family: "Fjalla One", sans-serif;
+}
+
+/* line 19, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/web_store_sass.sass */
+h1 {
+  padding: 0 0 0.6em 0;
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
+
+/* line 24, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/web_store_sass.sass */
+h2 {
+  padding: 0 0 0.75em 0;
+  font-size: 1.8em;
+}
+
+/* line 28, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/web_store_sass.sass */
+h3 {
+  font-size: 1.4em;
+}
+
+/* line 31, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/web_store_sass.sass */
+main {
+  max-width: 1200px;
+  padding: 20px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.95);
+  box-sizing: border-box;
+}
+
+/* line 38, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/web_store_sass.sass */
+h1 {
+  float: left;
+}
+
+/* line 41, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/web_store_sass.sass */
+#cart {
+  position: relative;
+  float: right;
+}
+/* line 44, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/web_store_sass.sass */
+#cart h3 span {
+  padding-left: 5px;
+}
+
+/* line 47, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/web_store_sass.sass */
+#items {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 1;
+  width: 200px;
+  padding: 8px;
+  background: #aeee00;
+}
+/* line 56, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/web_store_sass.sass */
+#items ul {
+  padding: 0 0 10px 0;
+}
+/* line 59, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/web_store_sass.sass */
+#items li + li {
+  clear: both;
+  padding-top: 5px;
+}
+/* line 62, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/web_store_sass.sass */
+#items li span {
+  float: right;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+/* line 66, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/web_store_sass.sass */
+#items a {
+  display: inline-block;
+  padding: 8px 15px;
+  font: normal 1.3em "Fjalla One", sans-serif;
+  text-decoration: none;
+  color: #000;
+  border: 3px double #01b0f0;
+  background: #01b0f0;
+  padding: 5px 10px;
+  font-size: 0.9em;
+  border: none;
+}
+
+/* line 78, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/web_store_sass.sass */
+#products {
+  clear: both;
+  margin: 0 -10px;
+}
+/* line 81, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/web_store_sass.sass */
+#products li {
+  display: inline-block;
+  width: 16.6%;
+  padding: 0 10px 10px 10px;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+/* line 87, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/web_store_sass.sass */
+#products img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  margin: 0 0 10px 0;
+}
+/* line 92, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/web_store_sass.sass */
+#products a {
+  display: inline-block;
+  padding: 8px 15px;
+  font: normal 1.3em "Fjalla One", sans-serif;
+  text-decoration: none;
+  color: #000;
+  border: 3px double #01b0f0;
+  background: #ff358b;
+}
+
+/* line 101, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/web_store_sass.sass */
+dt {
+  font-weight: bold;
+}
+
+/* line 104, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/web_store_sass.sass */
+dd {
+  padding: 5px 0 5px 15px;
+}
+
+/* line 107, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/web_store_sass.sass */
+span.logo {
+  display: block;
+  width: 64px;
+  text-indent: -8685px;
+  cursor: help;
+  background: transparent url("https://s3-ap-southeast-1.amazonaws.com/ccmcoversbsc/logos.jpg") 0 0 no-repeat;
+  background-size: 100% auto;
+}
+/* line 114, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/web_store_sass.sass */
+span.logo.snes {
+  height: 44px;
+}
+/* line 116, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/web_store_sass.sass */
+span.logo.ps2 {
+  height: 15px;
+  background-position: 0 -44px;
+}
+/* line 119, /Users/matthewmalone/Sites/ex_backbone_rails/app/assets/stylesheets/web_store_sass.sass */
+span.logo.gc {
+  height: 73px;
+  background-position: 0 -59px;
+}
+/*
+ */
