@@ -9,7 +9,7 @@ var App = {
     this.view.render();
   },
   fetchAlbums: function() {
-    this.albums = new Albums();
+    this.albums = new Albums(); // collection
     this.view = new AlbumsView({ collection: this.albums });
     this.albums.fetch({
       success: this.albumsLoaded.bind(this)
@@ -49,8 +49,9 @@ Backbone.history.start({
 
 $(document).on("click", "a[href^='/']", function(e) {
   e.preventDefault();     // "trigger: true" (below) will call the 'route' function in the 'initialize' method
+console.log($(e.currentTarget).attr("href").replace(/^\//, ""));
   router.navigate($(e.currentTarget).attr("href").replace(/^\//, ""), { trigger: true } );
-});
+});                // currentTarget is a jQuery method
 
 
 App.init();
