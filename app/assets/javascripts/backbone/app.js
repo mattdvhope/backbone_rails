@@ -49,7 +49,6 @@ Backbone.history.start({
 
 $(document).on("click", "a[href^='/']", function(e) {
   e.preventDefault();     // "trigger: true" (below) will call the 'route' function in the 'initialize' method
-console.log($(e.currentTarget).attr("href").replace(/^\//, ""));
   router.navigate($(e.currentTarget).attr("href").replace(/^\//, ""), { trigger: true } );
 });                // currentTarget is a jQuery method
 
