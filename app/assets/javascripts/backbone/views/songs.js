@@ -8,7 +8,7 @@ var SongsView = Backbone.View.extend({
     "click a.close": "close" // when 'a.close' is clicked, the 'close' method (below) is called
   },
   duration: 300,
-  template:  HandlebarsTemplates['songs/each_song'],
+  template:  HandlebarsTemplates['songs/index'],
   open: function () {
     this.$el.add($overlay).fadeIn(this.duration);
   },

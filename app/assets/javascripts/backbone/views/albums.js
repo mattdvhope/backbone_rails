@@ -1,6 +1,6 @@
 window.AlbumsView = Backbone.View.extend({
   // template:  Handlebars.compile($("[data-name=albums]").html()), // '.html()' causes it (the <script> tag) to take it's html (string) contents and to pass them into the compiler
-  template:  HandlebarsTemplates['albums/each_album'],
+  template:  HandlebarsTemplates['albums/index'],
   render: function() {
     this.$el.html(this.template({ albums: this.collection.toJSON() })); // 'albums' here is the 'albums' that we'll use in the Handlebars 'each' loop in the html page
   },  // $el is the current jQuery object that represents the view, in this case a <div> (default) at this moment
