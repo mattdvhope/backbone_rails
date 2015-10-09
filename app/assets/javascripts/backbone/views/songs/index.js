@@ -32,7 +32,7 @@ var SongsView = Backbone.View.extend({
   },
   initialize: function(options) { // need to accept this 'options' argument b/c Backbone will only assign these attributes to the view instance when they are a model or a collection...won't know what to do otherwise
     this.album = options.album;
-    this.$el.appendTo(document.body);
+    this.$el.appendTo(document.body); // 'this.$el' by default is a '<div>' element
   }
 });
 

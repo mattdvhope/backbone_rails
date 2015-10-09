@@ -9,8 +9,9 @@ var App = {
     this.view.render();
   },
   fetchAlbums: function() {
-    this.albums = new Albums(); // collection
-    this.view = new AlbumsView({ collection: this.albums });
+console.log(this);
+    this.albums = new Albums(); // in 'collections/albums.js', it will instantiate each 'Album' model, populating each model with data from the url, "/albums.json"
+    this.view = new AlbumsView({ collection: this.albums }); // it will populate this newly instantiated View's native 'collection' attribute with the collection ('this.albums') immediately defined above
     this.albums.fetch({
       success: this.albumsLoaded.bind(this)
     });
