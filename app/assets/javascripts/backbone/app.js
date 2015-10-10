@@ -26,7 +26,7 @@ console.log(this);
     this.songs = songs_modal;
   },
   fetchSongs: function(name) { // used in 'routers/albums.js'
-    var songs = new (Songs.extend({ // will extend the current 'songs' collection so that we can specify a url
+    var songs = new (Songs.extend({ // will extend the current 'Songs' collection so that we can specify a url
       url: "/albums/" + name + ".json"
     }))();
 
