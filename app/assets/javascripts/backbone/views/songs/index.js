@@ -31,7 +31,9 @@ var SongsView = Backbone.View.extend({
     this.open(); // to fade the overlay in...
   },
   initialize: function(options) { // need to accept this 'options' argument b/c Backbone will only assign these attributes to the view instance when they are a model or a collection...won't know what to do otherwise
-    this.album = options.album;
+console.log(options);
+console.log(this.$el);
+    this.album = options.album; //'options' here are from 'app.js'... the 'collection' and 'album' from when 'new SongsView()' is instantiated
     this.$el.appendTo(document.body); // 'this.$el' by default is a '<div>' element
   }
 });
