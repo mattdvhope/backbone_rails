@@ -22,6 +22,7 @@ var App = {
     });
 
     songs_modal.render();
+
     this.songs = songs_modal;
   },
   fetchSongs: function(name) { // used in 'routers/albums.js'
@@ -35,8 +36,11 @@ var App = {
       success: this.songsLoaded.bind(this)
     })
   },
-  newAlbum: function() {
-    this.fetchAlbums();
+  getAlbumForm: function() {
+    var new_form_modal = new newAlbumView();
+    new_form_modal.render();
+
+    this.new_form = new_form_modal;
   },
   init: function() {
     this.fetchAlbums();
