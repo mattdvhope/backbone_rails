@@ -4,6 +4,7 @@
 //= require handlebars.runtime
 //= require backbone
 //= require backbone-nested-attributes/all
+//= require backbone-forms-on-rails
 
 //= require backbone/app
 
