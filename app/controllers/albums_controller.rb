@@ -22,15 +22,14 @@ class AlbumsController < ApplicationController
 
   def create
     @album = Album.new
-binding.pry
-    @album.assign_attributes(params)
-    # @album.artist = params[:artist]
-    # @album.title = params[:title]
-    # @album.url = params[:url]
-    # @album.date = params[:date]
-    # @album.cover = params[:cover]
-    # @album.price = params[:price].to_i
-    # @album.save
+# binding.pry
+    @album.artist = params[:artist]
+    @album.title = params[:title]
+    @album.url = params[:url]
+    @album.date = params[:date]
+    @album.cover = params[:cover]
+    @album.price = params[:price].to_i
+    @album.save
   end
 
   private
