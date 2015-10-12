@@ -1,6 +1,8 @@
 class AlbumsController < ApplicationController
 
   def index
+    @album = Album.new
+    gon.album = @album
     @albums = Album.all
   end
 
@@ -13,7 +15,7 @@ class AlbumsController < ApplicationController
   end
 
   def new
-    @album = Album.new
+    redirect_to root_path 
   end
 
   def create
