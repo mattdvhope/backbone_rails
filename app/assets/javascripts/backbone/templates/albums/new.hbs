@@ -1,12 +1,19 @@
-<form id="new-event" name="event">
+<form id="new_album" action="/albums" method="post">    
+  </br>
+  <a class="close" href="#">Close</a>
   <div class="field">
-    <label for="title"> Title:</label>
-    <input type="text" name="name" id="name" >
+    <label for="artist"> Artist:</label>
+    <input type="text" name="artist" id="artist" >
   </div>
 
   <div class="field">
-    <label for="artist"> Artist:</label>
-    <input type="text" name="month" id="month" >
+    <label for="title"> Title:</label>
+    <input type="text" name="title" id="title" >
+  </div>
+
+  <div class="field">
+    <label for="url"> URL:</label>
+    <input type="text" name="url" id="url">
   </div>
 
   <div class="field">
@@ -16,16 +23,15 @@
 
   <div class="field">
     <label for="cover"> Cover:</label>
-    <input type="text" name="notes" id="notes">
+    <input type="text" name="cover" id="cover">
   </div>
 
   <div class="field">
     <label for="price"> Price:</label>
-    <input type="text" name="notes" id="notes">
+    <input type="text" name="price" id="price">
   </div>
 
   <div class="actions">
-    <input type="submit" value="Create Event" />
+    <input type="submit" value="Create Album" />
   </div>
-
 </form>
