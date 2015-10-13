@@ -1,7 +1,5 @@
 class AlbumsController < ApplicationController
 
-  protect_from_forgery except: :create
-
   def index
     @album = Album.new
     gon.album = @album
@@ -22,7 +20,7 @@ class AlbumsController < ApplicationController
 
   def create
     @album = Album.new
-# binding.pry
+binding.pry
     @album.artist = params[:artist]
     @album.title = params[:title]
     @album.url = params[:url]
@@ -31,11 +29,5 @@ class AlbumsController < ApplicationController
     @album.price = params[:price].to_i
     @album.save
   end
-
-  private
-
-    def album_params
-      params.require(:album).permit(:artist, :title, :url, :date, :cover, :price)
-    end
 
 end
