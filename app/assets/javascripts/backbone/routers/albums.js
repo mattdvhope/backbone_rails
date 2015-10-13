@@ -7,8 +7,6 @@ var Router = Backbone.Router.extend({
     App.fetchSongs(name); // 'fetchSongs' method in 'app.js'
   },
   addNewAlbum: function() {
-    // var newLp = gon.album
-    // console.log(newLp);
     App.getAlbumForm();
   },
   index: function() {
