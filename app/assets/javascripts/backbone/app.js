@@ -59,7 +59,6 @@ $(document).on("click", "a[href^='/']", function(e) {
   router.navigate($(e.currentTarget).attr("href").replace(/^\//, ""), { trigger: true } );
 });                // currentTarget is a jQuery method
 
-
 App.init();
 
 
