@@ -1,8 +1,10 @@
 class AlbumsController < ApplicationController
 
+
+
   def index
-    gon.album = Album.new
-    @albums = Album.all
+    # gon.album = Album.new
+    @albums = Album.all # goes to jbuilder
   end
 
   def show
@@ -14,19 +16,23 @@ class AlbumsController < ApplicationController
   end
 
   def new
-    redirect_to root_path # in case of page-refresh
+    redirect_to root_path
   end
 
   def create
-    @album = Album.new
-binding.pry
-    @album.artist = params[:artist]
-    @album.title = params[:title]
-    @album.url = params[:url]
-    @album.date = params[:date]
-    @album.cover = params[:cover]
-    @album.price = params[:price].to_i
-    @album.save
+    @album = Album.new(album_params)
+    if @album.save
+      redirect_to root_path
+    else
+      flash[:danger] = "You were not able to make a new Album."
+      redirect_to root_path
+    end
   end
+
+  private
+
+    def album_params
+      params.require(:album).permit(:artist, :title, :url, :date, :cover, :price)
+    end
 
 end

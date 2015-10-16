@@ -24,7 +24,7 @@ var newAlbumView = Backbone.View.extend({
     }.bind(this));
   },
   render: function() {
-    this.$el.html(this.template());
+    this.$el.html(this.template({ token: $('meta[name=csrf-token]').attr('content') }));
     this.open(); // to fade the overlay in...
   },
   initialize: function() {
