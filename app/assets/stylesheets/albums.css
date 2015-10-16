@@ -127,7 +127,7 @@ h3 {
   background: rgba(0, 0, 0, .6);
 }
 
-a.btn {
+a.btn, input.btn {
   background: #6034d9;
   background-image: -webkit-linear-gradient(top, #6034d9, #DADAFF);
   background-image: -moz-linear-gradient(top, #6034d9, #DADAFF);
@@ -144,7 +144,7 @@ a.btn {
   text-decoration: none;
 }
 
-a.btn:hover {
+a.btn:hover, input.btn:hover {
   background: #3cb0fd;
   background-image: -webkit-linear-gradient(top, #3cb0fd, #6034d9);
   background-image: -moz-linear-gradient(top, #3cb0fd, #6034d9);
@@ -153,6 +153,7 @@ a.btn:hover {
   background-image: linear-gradient(to bottom, #3cb0fd, #6034d9);
   text-decoration: none;
 }
+
 
 
 
