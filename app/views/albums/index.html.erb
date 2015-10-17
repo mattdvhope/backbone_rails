@@ -1,17 +1,13 @@
 <% title "Albums"  %><!-- 'title' method from application_helper.rb -->
 <main>
   <h1>Albums</h1>
-  <ul id="albums">
-    <!-- template in 'javascripts/backbone/templates/albums/index.hbs -->'
-  </ul>
+  <ul id="albums"><!-- albums/index.hbs.erb --></ul>
   <hr>
   </br>
-  <%= link_to "Add New Album", new_album_path, :class => "btn" %>
+  <%= link_to "Add New Album", new_album_path, :class => "btn" %><!-- opens new.hbs.erb -->
 </main>
 
-<div id="overlay"><!-- in css; 'overlay' can't interact w/ what is in <main> -->
-  <!-- template in 'javascripts/backbone/templates/songs/index.hbs -->'
-</div>
+<div id="overlay"><!-- songs/index.hbs --></div>
 
 
 
