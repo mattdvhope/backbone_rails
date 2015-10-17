@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   root to: "albums#index" 
 
-  resources :albums, only: [:index, :show, :new, :create]
+  resources :albums
 
   resources :songs, only: [:index, :show]
 
