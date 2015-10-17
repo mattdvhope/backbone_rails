@@ -29,6 +29,14 @@ class AlbumsController < ApplicationController
     end
   end
 
+  def edit
+    
+  end
+
+  def update
+    
+  end
+
   private
 
     def album_params
