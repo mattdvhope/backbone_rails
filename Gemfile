@@ -15,6 +15,7 @@ gem 'handlebars_assets'
 gem 'backbone-nested-attributes'
 # gem 'backbone-forms-on-rails'
 
+gem "js-routes" # to define path helpers in asset pipeline
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 # gem 'bootstrap-sass', '~> 3.3.5'
 gem 'sass-rails', '>= 3.2'
