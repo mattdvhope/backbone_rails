@@ -10,7 +10,9 @@
   </br>
   <a href="#" class="btn">Add to cart</a>
   </br>
-{{!-- account for #each albums LOOP!!!!  edit_album_path WON'T work b/c I'm in the #each albums LOOP!!! --}}  <a href={{edit_album_path}} class="btn">Update Album</a>
+  <a href="{{edit_album}}" class="btn">Update Album</a>
+  </br>
+  <a href="{{delete_album}}" method="delete" class="btn">Delete Album</a>
 </li>
 {{/each}}
 
