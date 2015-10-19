@@ -17,7 +17,7 @@ var App = {
   },
   songsLoaded: function(songs) {
     var songs_modal = new SongsView({
-      collection: songs,
+      collection: songs, // Do I need this?? Seems to work w/o this in views/songs/index.js
       album: this.selected_album.toJSON()
     });
 
