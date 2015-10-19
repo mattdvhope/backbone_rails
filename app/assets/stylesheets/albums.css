@@ -49,7 +49,7 @@ h3 {
   color: inherit;
 }
 
-#new_album_modal {
+#album_form_modal {
   display: none;
   position: fixed;
   top: 25px;
@@ -61,7 +61,7 @@ h3 {
   background: #f5f6d4;
 }
 
-#new_album_modal a.close {
+#album_form_modal a.close {
   position: absolute;
   top: 25px;
   right: 25px;

@@ -2,7 +2,7 @@ var $overlay = $("#overlay");
 
 var newAlbumView = Backbone.View.extend({
   attributes: {
-    id: "new_album_modal"
+    id: "album_form_modal"
   },
   events: {
     "click a.close": "close"
@@ -24,7 +24,9 @@ var newAlbumView = Backbone.View.extend({
     }.bind(this));
   },
   render: function() {
-    this.$el.html(this.template({ token: $('meta[name=csrf-token]').attr('content') }));
+    this.$el.html(this.template({
+      token: $('meta[name=csrf-token]').attr('content')
+    }));
     this.open(); // to fade the overlay in...
   },
   initialize: function() {
