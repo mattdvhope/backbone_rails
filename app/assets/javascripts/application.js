@@ -1,3 +1,4 @@
+//= require js-routes
 //= require jquery
 //= require jquery_ujs
 //= require underscore
