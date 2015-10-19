@@ -4,7 +4,7 @@ json.title           @album.title
 json.url             @album.url
 json.date            @album.date
 json.cover           @album.cover
-json.price           "$" + '%.2f' % [@album.price / 100.0]
+json.price           @album.price ? ("฿" + @album.price.to_s) : "Free!!"
 
 
 json.songs @album.songs do |song|
