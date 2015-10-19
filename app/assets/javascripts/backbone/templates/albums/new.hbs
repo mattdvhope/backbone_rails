@@ -1,19 +1,35 @@
 <a class="close" href="#">Close</a>
 
-<form class="new_album" id="new_album" action="/albums" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value={{token}}>
-  Artist:<br>
-  <input type="text" name="album[artist]" id="album_artist"><br>
-  Title:<br>
-  <input type="text" name="album[title]" id="album_title"><br>
-  URL:<br>
-  <input type="text" name="album[url]" id="album_url"><br>
-  Date:<br>
-  <input type="text" name="album[date]" id="album_date"><br>
-  Cover:<br>
-  <input type="text" name="album[cover]" id="album_cover"><br>
-  Price:<br>
-  <input type="text" name="album[price]" id="album_price"><br>
-  <input type="submit" name="commit" value="Create Album">
+<form class="white-form" id="new_album" action="/albums" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value={{token}}>
+  <h1>Album Form 
+    <span>Please fill all the texts in the fields.</span>
+  </h1>
+  <label>
+    <span>Artist:</span>
+    <input type="text" name="album[artist]" id="album_artist" value="Filled in ARTIST"><br>
+  </label>
+  <label>
+    <span>Title:</span>
+    <input type="text" name="album[title]" id="album_title" value="Filled in TITLE"><br>
+  </label>
+  <label>
+    <span>URL:</span>
+    <input type="text" name="album[url]" id="album_url"><br>
+  </label>
+  <label>
+    <span>Date:</span>
+    <input type="text" name="album[date]" id="album_date"><br>
+  </label>
+  <label>
+    <span>Cover:</span>
+    <input type="text" name="album[cover]" id="album_cover"><br>
+  </label>
+  <label>
+    <span>Price:</span>
+    <input type="text" name="album[price]" id="album_price"><br>
+  </label>
+
+  <input type="submit" name="commit" value="Submit Album" class="btn">
 </form>
 
 
