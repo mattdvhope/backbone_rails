@@ -4,7 +4,7 @@ var Router = Backbone.Router.extend({
     "albums/:name": "getAlbum"
   },
   getAlbum: function(name) {
-]    App.fetchSongs(name);
+    App.fetchSongs(name);
   },
   addNewAlbum: function() {
     App.getAlbumForm();
