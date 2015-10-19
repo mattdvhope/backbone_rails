@@ -59,6 +59,12 @@ $(document).on("click", "a[href^='/']", function(e) {
   router.navigate($(e.currentTarget).attr("href").replace(/^\//, ""), { trigger: true } );
 });                // currentTarget is a jQuery method
 
+
+Handlebars.registerHelper("format_price", function(price) {
+  return (+price).toFixed(2);
+});
+
+
 App.init();
 
 console.log(Routes);
