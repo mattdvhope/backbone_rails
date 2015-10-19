@@ -6,7 +6,7 @@ json.array! @albums do |album|
   json.url       album.url
   json.date      album.date
   json.cover     album.cover
-  json.price     album.price ? ("$" + '%.2f' % [album.price / 100.0]) : 0.00
+  json.price     album.price ? ("฿" + album.price.to_s) : "Free!!"
 
   json.songs     album.songs do |song|
     json.id      song.id
