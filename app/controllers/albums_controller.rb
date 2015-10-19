@@ -36,11 +36,8 @@ class AlbumsController < ApplicationController
     
   end
 
-  def delete
-binding.pry
-  end
-
   def destroy
+binding.pry
     
   end
 
