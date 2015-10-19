@@ -1,5 +1,30 @@
 <% title "Albums"  %><!-- 'title' method from application_helper.rb -->
 <main>
+  <hr>
+  <header id="album_header">
+    <div id="cart">
+      <label for="cart_toggle">2 items</label>
+      <input id="cart_toggle" type="checkbox">
+      <div id="items">
+        <ul>
+          <li>
+            <a href="#">Remove</a>
+            Album Name x 1
+            <small>$19.00</small>
+          </li>
+          <li>
+            <a href="#">Remove</a>
+            Really Long Album Name x 2
+            <small>$10.99</small>
+          </li>
+        </ul>
+        <p>$29.99</p>
+      </div>
+    </div>
+  </header>
+  <br>
+  <br>
+  <br>
   <h1>Albums</h1>
   <ul id="albums"><!-- albums/index.hbs.erb --></ul>
   <hr>
