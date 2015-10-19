@@ -148,6 +148,9 @@ header#album_header {
   cursor: pointer;
 }
 
+#cart>input[type=checkbox] {
+  display: none; /*to hide actual 'box'*/
+}
 #cart>input[type=checkbox] + #items {
   display: none;
 }
