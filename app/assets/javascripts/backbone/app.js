@@ -61,7 +61,7 @@ $(document).on("click", "a[href^='/']", function(e) {
 
 App.init();
 
-
+console.log(Routes.edit_album_path(1));
 
 
 
