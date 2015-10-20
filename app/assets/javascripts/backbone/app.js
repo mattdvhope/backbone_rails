@@ -5,6 +5,7 @@
 //= require_tree ./routers
 
 var App = {
+  $el: $("main"),
   albumsLoaded: function() {
     this.view.render();
   },
@@ -13,6 +14,12 @@ var App = {
     this.view = new AlbumsView({ collection: this.albums }); // it will populate this newly instantiated View's native 'collection' attribute with the collection ('this.albums') immediately defined above
     this.albums.fetch({
       success: this.albumsLoaded.bind(this)
+    });
+  },
+  createCart: function() {
+    this.cart = new CartItems(); // in 'cart/index.hbs'
+    this.cart.view = new CartView({
+      collection: this.cart
     });
   },
   songsLoaded: function(songs) {
@@ -36,14 +43,21 @@ var App = {
       success: this.songsLoaded.bind(this)
     })
   },
-  getAlbumForm: function() {
+  getNewAlbumForm: function() {
     var new_form_modal = new newAlbumView();
     new_form_modal.render();
 
     this.new_form = new_form_modal;
   },
+  bindEvents: function() {
+    _.extend(this, Backbone.Events);
+    // this.listenTo(this.index, "add_album", this.getNewAlbumForm);
+    this.on("add_to_cart", this.cart.addItem()); // 'add_to_cart' in 'albums/show.js' ... 'addItem' method in 'collections/cart_item.js'
+  },
   init: function() {
     this.fetchAlbums();
+    this.createCart();
+    this.bindEvents();
   }
 };
 
@@ -66,8 +80,6 @@ Handlebars.registerHelper("format_price", function(price) {
 
 
 App.init();
-
-console.log(Routes);
 
 
 
