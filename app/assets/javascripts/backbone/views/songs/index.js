@@ -5,7 +5,13 @@ var SongsView = Backbone.View.extend({
     id: "songs_modal"
   },
   events: { // specify an 'events' object to activate 'Close' link
-    "click a.close": "close" // when 'a.close' is clicked, the 'close' method (below) is called
+    "click a.close": "close",
+    "click #cart_button": "addToCart"
+  },
+  addToCart: function(e) {
+console.log(this.album);
+    e.preventDefault();
+    App.trigger("add_to_cart", this.model);
   },
   duration: 300,
   template:  HandlebarsTemplates['songs/index'],
