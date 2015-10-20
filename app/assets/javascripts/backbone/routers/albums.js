@@ -1,13 +1,13 @@
 var Router = Backbone.Router.extend({
   routes: {
     "albums/new": "addNewAlbum",
-    "albums/:name": "getAlbum"
+    "albums/:name": "getAlbum",
   },
   getAlbum: function(name) {
     App.fetchSongs(name);
   },
   addNewAlbum: function() {
-    App.getAlbumForm();
+    App.getNewAlbumForm();
   },
   index: function() {
     var modal = App.songs || App.new_form
