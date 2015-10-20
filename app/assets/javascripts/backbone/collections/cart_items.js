@@ -14,12 +14,12 @@ var CartItems = Backbone.Collection.extend({
   addItem: function(item) {
     var item = item.clone();
     item.set("quantity", 1);
-console.log(item.toJSON());
+console.log(this.toJSON());
     this.add(item);
 console.log(this.toJSON());
     this.setTotal();
-console.log(this.total);
+// console.log(this.quantity);
     this.setQuantity();
-console.log(this.quantity);
+// console.log(this.quantity);
   }
 });
