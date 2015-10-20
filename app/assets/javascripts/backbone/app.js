@@ -17,7 +17,7 @@ var App = {
     });
   },
   createCart: function() {
-    this.cart = new CartItems(); // in 'cart/index.hbs'
+    this.cart = new CartItems();
     this.cart.view = new CartView({
       collection: this.cart
     });
@@ -25,7 +25,8 @@ var App = {
   songsLoaded: function(songs) {
     var songs_modal = new SongsView({
       collection: songs, // Do I need this?? Seems to work w/o this in views/songs/index.js
-      album: this.selected_album.toJSON()
+      album_obj: this.selected_album,
+      album_json: this.selected_album.toJSON()
     });
 
     songs_modal.render();
