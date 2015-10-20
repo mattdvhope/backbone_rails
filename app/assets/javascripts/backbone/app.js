@@ -52,7 +52,7 @@ var App = {
   bindEvents: function() {
     _.extend(this, Backbone.Events);
     // this.listenTo(this.index, "add_album", this.getNewAlbumForm);
-    this.on("add_to_cart", this.cart.addItem()); // 'add_to_cart' in 'albums/show.js' ... 'addItem' method in 'collections/cart_item.js'
+    // this.on("add_to_cart", this.cart.addItem()); // 'add_to_cart' in 'albums/show.js' ... 'addItem' method in 'collections/cart_item.js'
   },
   init: function() {
     this.fetchAlbums();
