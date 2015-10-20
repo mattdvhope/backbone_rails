@@ -9,9 +9,10 @@ var SongsView = Backbone.View.extend({
     "click #cart_button": "addToCart"
   },
   addToCart: function(e) {
-console.log(this.album);
+console.log(App.cart);
     e.preventDefault();
-    App.trigger("add_to_cart", this.model);
+    App.cart.addItem(this.album_obj);
+console.log(App.cart);
   },
   duration: 300,
   template:  HandlebarsTemplates['songs/index'],
@@ -31,13 +32,14 @@ console.log(this.album);
   },
   render: function() {
     this.$el.html(this.template({
-      songs: this.album.songs,
-      album: this.album
+      songs: this.album_json.songs,
+      album: this.album_json
     }));
     this.open(); // to fade the overlay in...
   },
   initialize: function(options) { // need to accept this 'options' argument b/c Backbone will only assign these attributes to the view instance when they are a model or a collection...won't know what to do otherwise
-    this.album = options.album; //'options' here are from 'app.js'...the 'collection' and 'album' from when 'new SongsView()' is instantiated
+    this.album_obj = options.album_obj;
+    this.album_json = options.album_json; //'options' here are from 'app.js'...the 'collection' and 'album' from when 'new SongsView()' is instantiated
     this.$el.appendTo(document.body); // 'this.$el' by default is a '<div>' element
   }
 });
