@@ -9,10 +9,8 @@ var SongsView = Backbone.View.extend({
     "click #cart_button": "addToCart"
   },
   addToCart: function(e) {
-console.log(App.cart);
     e.preventDefault();
     App.cart.addItem(this.album_obj);
-console.log(App.cart);
   },
   duration: 300,
   template:  HandlebarsTemplates['songs/index'],
