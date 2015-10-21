@@ -5,13 +5,13 @@
   <ul>
     {{#each items}}
     <li>
-      <a href="#">Remove</a>
-      {{title}} x {{quantity}}
-      <small>${{price}}</small>
+      <a class="remove" href="#">Remove</a>
+      {{title}} x {{item_quantity}}
+      <small>= ${{format_price price_multiplied}}</small>
     </li>
     {{/each}}
   </ul>
-  <p>${{total}}</p>
+  <p>${{format_price total}}</p>
 </div>
 {{else}}
 <p>0 items</p>
