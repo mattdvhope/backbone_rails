@@ -45,7 +45,7 @@ var App = {
     })
   },
   getNewAlbumForm: function() {
-    var new_form_modal = new newAlbumView();
+    var new_form_modal = new NewAlbumView();
     new_form_modal.render();
 
     this.new_form = new_form_modal;
