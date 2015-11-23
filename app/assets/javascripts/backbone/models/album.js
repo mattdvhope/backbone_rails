@@ -6,3 +6,7 @@ var Album = Backbone.Model.extend({
     return attrs;
   }
 });
+
+// "Routes" and ".._path.." provided by 'js-routes' gem
+// Note: Can use json w/ js-routes like this: Routes.user_path(1, {format: 'json'})
+// See 'https://github.com/railsware/js-routes' for more configurations
