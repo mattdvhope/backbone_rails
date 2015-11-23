@@ -1,6 +1,6 @@
 var $overlay = $("#overlay");
 
-var newAlbumView = Backbone.View.extend({
+var NewAlbumView = Backbone.View.extend({
   attributes: {
     id: "album_form_modal"
   },
