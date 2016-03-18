@@ -1,0 +1,3 @@
+class ShopItem
+
+end
