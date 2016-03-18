@@ -2,11 +2,17 @@ Rails.application.routes.draw do
 
   mount MagicLamp::Genie, at: "/magic_lamp" if defined?(MagicLamp)
 
-  root to: "albums#index" 
+  root to: "shopitems#index" 
 
-  resources :albums
+  resources :categories
 
-  resources :songs, only: [:index, :show]
+  resources :shopitems
+
+  resources :types  
+
+  # resources :albums
+
+  # resources :songs, only: [:index, :show]
 
   # resources :products, only: [:index, :show]
 
