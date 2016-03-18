@@ -17,7 +17,7 @@ gem 'backbone-nested-attributes'
 
 gem "js-routes" # to define path helpers in asset pipeline
 gem 'sprockets-rails', :require => 'sprockets/railtie'
-# gem 'bootstrap-sass', '~> 3.3.5'
+gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '>= 3.2'
 
 gem 'responders'
