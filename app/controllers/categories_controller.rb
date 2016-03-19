@@ -9,10 +9,16 @@ class CategoriesController < ApplicationController
   end
 
   def create
-binding.pry
     @category = Category.create(category_params)
-binding.pry
-    redirect_to :back
+    render :nothing => true
+  end
+
+  def update
+# binding.pry
+    @category = Category.find(params[:id])
+    @category.update(category_params)
+# binding.pry
+    render :nothing => true
   end
 
   private
