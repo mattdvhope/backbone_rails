@@ -14,9 +14,15 @@ class CategoriesController < ApplicationController
   end
 
   def update
-# binding.pry
     @category = Category.find(params[:id])
     @category.update(category_params)
+    render :nothing => true
+  end
+
+  def destroy
+    @category = Category.find(params[:id])
+# binding.pry
+    @category.destroy
 # binding.pry
     render :nothing => true
   end
