@@ -1,4 +1,4 @@
-Categories = Backbone.Collection.extend({
+window.Categories = Backbone.Collection.extend({
 
   model: Category,
   url : 'categories'
