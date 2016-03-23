@@ -1,6 +1,8 @@
 window.Categories = Backbone.Collection.extend({
 
   model: Category,
-  url : 'categories'
+  url : function() {
+    return 'categories';
+  }
 
 });
