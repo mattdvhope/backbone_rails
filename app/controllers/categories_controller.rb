@@ -21,9 +21,7 @@ class CategoriesController < ApplicationController
 
   def destroy
     @category = Category.find(params[:id])
-# binding.pry
     @category.destroy
-# binding.pry
     render :nothing => true
   end
 
