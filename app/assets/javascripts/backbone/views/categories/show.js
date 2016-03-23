@@ -14,7 +14,9 @@ window.CategoryView = Backbone.View.extend({
     e.preventDefault();
     var id = $(e.target).parents('li').data('id');
     var model = this.collection.where({ id: id })[0];
-    console.log(model.toJSON());
+
+    this.collection.remove(model); // removes 'model' from this collection within client-side backbone
+    model.destroy(); // removes/deletes/destroys 'model' on the server side
   },
 
   render: function() {
