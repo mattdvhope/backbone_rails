@@ -11,6 +11,15 @@ window.CategoryView = Backbone.View.extend({
     this.collection.bind('all', this.render);
   },
 
+  show: function() {
+    $(this.el).modal({show:true});
+    $('.modal-backdrop').removeClass("modal-backdrop");
+  },
+
+  hide: function() {
+    $(this.el).modal('hide');
+  },
+
   addCategory: function(e) {
     e.preventDefault();
     this.collection.create({ name: $(this.el).find('.category_name').val() });
