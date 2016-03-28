@@ -20,7 +20,6 @@ window.CategoryView = Backbone.View.extend({
   addCategory: function(e) {
     e.preventDefault();
     this.collection.create({ name: $(this.el).find('.category_name').val() });
-    this.collection.fetch();
   },
 
   removeCategory: function(e) {
@@ -28,15 +27,7 @@ window.CategoryView = Backbone.View.extend({
     var id = $(e.target).parents('li').data('id');
     var model = this.collection.where({ id: id })[0];
     this.collection.remove(model);
-    model.destroy();
-  },
-
-  sort_list_items: function() {
-    $(".categories li").sort(sort_li)
-      .appendTo('.categories');
-    function sort_li(a, b){
-      return ($(b).data('id')) < ($(a).data('id')) ? 1 : -1;    
-    }
+    if (model) { model.destroy(); }
   },
 
   render: function() {
@@ -49,10 +40,7 @@ window.CategoryView = Backbone.View.extend({
         id: cat.get('id'),
         name: cat.get('name')
       }));
-
     }, this); // The 'this' at the end causes the 'this' inside of this 'each' statement to be the same 'this' that is part of the rest of the app.
-
-    this.sort_list_items();
 
     return this; // to chain methods to 'render()'
   }

@@ -12,6 +12,7 @@ var App = {
     this.categoryView = new CategoryView({ collection: this.categories });
     $("#categorymodal").html(this.categoryView.render().el);
   },
+
   init: function() {
     this.instantiateCategoryView();
   }
