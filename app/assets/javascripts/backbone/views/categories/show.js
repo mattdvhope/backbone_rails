@@ -1,7 +1,9 @@
 window.CategoryView = Backbone.View.extend({
 
+  className: "a-class",
   show_template:HandlebarsTemplates['categories/show'],
   events: {
+    'click .close': 'hide',
     'click .delete': 'removeCategory',
     'click .category_add': 'addCategory'
   },
@@ -11,31 +13,35 @@ window.CategoryView = Backbone.View.extend({
     this.collection.bind('all', this.render);
   },
 
-  show: function() {
-    $(this.el).modal({show:true});
-    $('.modal-backdrop').removeClass("modal-backdrop");
-  },
-
-  hide: function() {
-    $(this.el).modal('hide');
+  toggle: function() {
+    $("#categorymodal").modal('toggle');
   },
 
   addCategory: function(e) {
     e.preventDefault();
     this.collection.create({ name: $(this.el).find('.category_name').val() });
+    this.collection.fetch();
   },
 
   removeCategory: function(e) {
     e.preventDefault();
     var id = $(e.target).parents('li').data('id');
     var model = this.collection.where({ id: id })[0];
+    this.collection.remove(model);
+    model.destroy();
+  },
 
-    this.collection.remove(model); // removes 'model' from this collection within client-side backbone
-    model.destroy(); // removes/deletes/destroys 'model' on the server side
+  sort_list_items: function() {
+    $(".categories li").sort(sort_li)
+      .appendTo('.categories');
+    function sort_li(a, b){
+      return ($(b).data('id')) < ($(a).data('id')) ? 1 : -1;    
+    }
   },
 
   render: function() {
     $(this.el).html(this.show_template());
+
     this.collection.each(function(cat) {
       var li_template = HandlebarsTemplates['categories/single_category']
 
@@ -46,7 +52,9 @@ window.CategoryView = Backbone.View.extend({
 
     }, this); // The 'this' at the end causes the 'this' inside of this 'each' statement to be the same 'this' that is part of the rest of the app.
 
-    return this;
+    this.sort_list_items();
+
+    return this; // to chain methods to 'render()'
   }
 
 });

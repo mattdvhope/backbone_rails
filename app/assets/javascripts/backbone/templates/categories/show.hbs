@@ -1,23 +1,29 @@
-<div class="modal-header">
-  <button class="close">x</button>
-  <h3>Manage Categories</h3>
-</div>
+  <div class="modal-dialog">
+  
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h3 class="modal-title">Manage Categories</h3>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal">
+          <div class="control-group">
+            <label>new category</label>
+            <input type="text" class="form-control category_name" placeholder="Category" aria-describedby="basic-addon1" maxlength="100">
+            <br>
+            <button class="category_add btn btn-primary">Add</button>
+          </div>
 
-<div class="modal-body">
-  <form class="form-horizontal">
-    <div class="control-group">
-      <label>new category</label>
-      <input type="text" class="form-control category_name" placeholder="Category" aria-describedby="basic-addon1" maxlength="100">
-      <br>
-      <button class="category_add btn btn-primary">Add</button>
+          <ul class="categories span3">
+
+          </ul>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
     </div>
+    
+  </div>
 
-    <ul class="categories span3">
-
-    </ul>
-  </form>
-</div>
-
-<div class="modal-footer">
-  <a href="#" class="btn">Close</a>
-</div>
