@@ -21,7 +21,6 @@ window.CategoryView = Backbone.View.extend({
     e.preventDefault();
     this.collection.create({ name: $(this.el).find('.category_name').val() });
     this.collection.fetch();
-    this.render();
   },
 
   removeCategory: function(e) {
