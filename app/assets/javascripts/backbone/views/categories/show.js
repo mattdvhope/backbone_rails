@@ -10,7 +10,7 @@ window.CategoryView = Backbone.View.extend({
   initialize: function() { // 'initialize' is the constructor of this particular view
     _.bindAll(this, 'render');
     this.collection.fetch();
-    this.collection.bind('sync', this.render);
+    this.collection.bind('all', this.render);
   },
 
   toggle: function() {
@@ -20,8 +20,7 @@ window.CategoryView = Backbone.View.extend({
   addCategory: function(e) {
     e.preventDefault();
     this.collection.create({ name: $(this.el).find('.category_name').val() });
-    // this.collection.fetch();
-    // this.render();
+    this.collection.fetch();
   },
 
   removeCategory: function(e) {
@@ -30,7 +29,6 @@ window.CategoryView = Backbone.View.extend({
     var model = this.collection.where({ id: id })[0];
     this.collection.remove(model);
     if (model) { model.destroy(); }
-    this.render();
   },
 
   render: function() {
