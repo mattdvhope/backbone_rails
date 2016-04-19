@@ -21,6 +21,7 @@ window.CategoryView = Backbone.View.extend({
     e.preventDefault();
     this.collection.create({ name: $(this.el).find('.category_name').val() });
     this.collection.fetch();
+    this.render();
   },
 
   removeCategory: function(e) {
@@ -46,6 +47,7 @@ window.CategoryView = Backbone.View.extend({
     });
 
     this.collection.models.forEach(function(cat) {
+console.log(cat.toJSON().id);
       var li_template = HandlebarsTemplates['categories/single_category']
       $(this.el).find('.categories').append(li_template({
         id: cat.toJSON().id,
