@@ -8,7 +8,7 @@
     "tag": "2.9.1",
     "commit": "7311bddf183d0bc4905ba13db879b5cb5f022d12"
   },
-  "_source": "git://github.com/jshint/jshint.git",
+  "_source": "https://github.com/jshint/jshint.git",
   "_target": "*",
   "_originalSource": "jshint"
 }
