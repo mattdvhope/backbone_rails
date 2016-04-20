@@ -8,16 +8,16 @@
 
 var App = {
   instantiateCategoryView: function() {
-    window.categories = new Categories();
-    window.categoryView = new CategoryView({ collection: window.categories });
-    $("#categorymodal").html(window.categoryView.render().el);
+    this.categories = new Categories();
+    this.categoryView = new CategoryView({ collection: this.categories });
+    $("#categorymodal").html(this.categoryView.render().el);
 
     shopping_list = new ShoppingList()
-    shopping_list.bind('all', function() {
+    shopping_list.bind('sync', function() {
       $(".shoppinglist").empty();
 
       shopping_list.each(function(shop_item) {
-        var view = new ShopItemView({ model: shop_item });
+        // var view = new ShopItemView({ model: shop_item, categories: this.categories });
 
         $(".shoppinglist").append(view.render().el);
       }, this);
@@ -25,6 +25,7 @@ var App = {
   },
 
   init: function() {
+    // this.categories.fetch();
     this.instantiateCategoryView();
   }
 };

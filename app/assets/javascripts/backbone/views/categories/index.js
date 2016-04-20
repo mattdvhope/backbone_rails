@@ -17,11 +17,14 @@ window.CategoryView = Backbone.View.extend({
     $("#categorymodal").modal('toggle');
   },
 
+  show: function() {
+    $("#categorymodal").modal();
+  },
+
   addCategory: function(e) {
     e.preventDefault();
     this.collection.create({ name: $(this.el).find('.category_name').val() });
-    this.collection.fetch();
-    this.render();   
+    this.show();
   },
 
   removeCategory: function(e) {
