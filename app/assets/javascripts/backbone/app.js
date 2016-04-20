@@ -8,9 +8,20 @@
 
 var App = {
   instantiateCategoryView: function() {
-    this.categories = new Categories();
-    this.categoryView = new CategoryView({ collection: this.categories });
-    $("#categorymodal").html(this.categoryView.render().el);
+    window.categories = new Categories();
+    window.categoryView = new CategoryView({ collection: window.categories });
+    $("#categorymodal").html(window.categoryView.render().el);
+
+    shopping_list = new ShoppingList()
+    shopping_list.bind('all', function() {
+      $(".shoppinglist").empty();
+
+      shopping_list.each(function(shop_item) {
+        var view = new ShopItemView({ model: shop_item });
+
+        $(".shoppinglist").append(view.render().el);
+      }, this);
+    });
   },
 
   init: function() {

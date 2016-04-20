@@ -1,4 +1,4 @@
-window.ShopItems = Backbone.Collection.extend({
+window.ShoppingList = Backbone.Collection.extend({
 
   model: ShopItem,
   url : function() {
