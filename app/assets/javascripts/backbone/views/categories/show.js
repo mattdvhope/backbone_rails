@@ -10,7 +10,7 @@ window.CategoryView = Backbone.View.extend({
   initialize: function() { // 'initialize' is the constructor of this particular view
     _.bindAll(this, 'render');
     this.collection.fetch();
-    this.collection.bind('sync', this.render);
+    this.collection.bind('all', this.render);
   },
 
   toggle: function() {
@@ -20,7 +20,7 @@ window.CategoryView = Backbone.View.extend({
   addCategory: function(e) {
     e.preventDefault();
     this.collection.create({ name: $(this.el).find('.category_name').val() });
-    this.render();
+    this.render();   
   },
 
   removeCategory: function(e) {
@@ -46,7 +46,6 @@ window.CategoryView = Backbone.View.extend({
     });
 
     this.collection.models.forEach(function(cat) {
-console.log(cat.toJSON().id);
       var li_template = HandlebarsTemplates['categories/single_category']
       $(this.el).find('.categories').append(li_template({
         id: cat.toJSON().id,
