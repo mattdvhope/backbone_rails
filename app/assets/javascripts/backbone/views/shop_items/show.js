@@ -11,24 +11,19 @@ window.ShopItemView = Backbone.View.extend({
     _.bindAll(this, 'render');
     this.model.bind('change', this.render);
   },
-
   render: function() {
     $(this.el).html(this.template({
       model_name: this.model.get('name'),
-      item_name: this.model.get('category') && this.model.get('name').length > 0 ? this.model.get('category').get('name') : 'no category'
+      item_name: this.model.get('category') && this.model.get('category').get('name').length > 0 ? this.model.get('category').get('name') : 'no category',
     }));
 
-      categories: if (App.categories != undefined) {
-        App.categories.each(function(c) {
-          $('.dropdown-menu').append(
-            this.li_template({
-              cat_id: c.get('id'),
-              cat_name: c.get('name')
-            })
-          )
-        }, this);
-      }
-
+    App.categories.models.forEach(function(cat) {
+      var li_template = HandlebarsTemplates['shop_items/list_item']
+      $(this.el).find('.dropdown-menu').append(li_template({
+        id: cat.toJSON().id,
+        name: cat.toJSON().name
+      }));
+    }, this); // The 'this' at the end causes the 'this' inside of this 'forEach' statement to be the same 'this' that is part of the rest of the app.
 
     return this;
   }
