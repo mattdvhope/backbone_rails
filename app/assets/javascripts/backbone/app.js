@@ -22,7 +22,6 @@ var App = {
     });
   },
   fetch_app_shopping_list: function() {
-    
     app_shopping_list.fetch();
   },
   init: function() {
