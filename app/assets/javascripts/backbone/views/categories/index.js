@@ -27,7 +27,8 @@ window.CategoryView = Backbone.View.extend({
     // this.withoutIds = this.collection.filter(function (category) {
     //   return !category.id;
     // });
-    // App.instantiateCategoryView();
+    App.instantiateCategoryView();
+    App.instantiateCategoryView();
     this.show();
   },
 
@@ -35,6 +36,7 @@ window.CategoryView = Backbone.View.extend({
     e.preventDefault();
     var id = $(e.target).parents('li').data('id');
     var model = this.collection.where({ id: id })[0];
+console.log(id);
     this.collection.remove(model);
     if (model) { model.destroy(); }
     this.render();
