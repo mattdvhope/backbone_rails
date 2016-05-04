@@ -13,7 +13,6 @@ window.ShopItemView = Backbone.View.extend({
   },
 
   render: function() {
-console.log(this.categories);
     $(this.el).html(this.template({
       model_name: this.model.get('name'),
       item_name: this.model.get('category') && this.model.get('name').length > 0 ? this.model.get('category').get('name') : 'no category'
