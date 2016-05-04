@@ -24,6 +24,9 @@ window.CategoryView = Backbone.View.extend({
   addCategory: function(e) {
     e.preventDefault();
     this.collection.create({ name: $(this.el).find('.category_name').val() });
+    // this.withoutIds = this.collection.filter(function (category) {
+    //   return !category.id;
+    // });
     this.show();
   },
 

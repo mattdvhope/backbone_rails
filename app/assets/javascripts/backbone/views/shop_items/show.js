@@ -19,16 +19,16 @@ console.log(this.categories);
       item_name: this.model.get('category') && this.model.get('name').length > 0 ? this.model.get('category').get('name') : 'no category'
     }));
 
-      // categories: //if (App.categories != undefined) {
-        // App.categories.each(function(c) {
-        //   $('.dropdown-menu').append(
-        //     this.li_template({
-        //       cat_id: c.get('id'),
-        //       cat_name: c.get('name')
-        //     })
-        //   )
-        // }, this);
-      // }
+      categories: if (App.categories != undefined) {
+        App.categories.each(function(c) {
+          $('.dropdown-menu').append(
+            this.li_template({
+              cat_id: c.get('id'),
+              cat_name: c.get('name')
+            })
+          )
+        }, this);
+      }
 
 
     return this;

@@ -15,7 +15,7 @@ var App = {
       $(".shoppinglist").empty();
 
       shopping_list.each(function(shop_item) {
-        // var view = new ShopItemView({ model: shop_item, categories: this.categories });
+        var view = new ShopItemView({ model: shop_item, categories: this.categories });
 
         $(".shoppinglist").append(view.render().el);
       }, this);
@@ -23,7 +23,6 @@ var App = {
   },
 
   init: function() {
-    // this.categories.fetch();
     this.instantiateCategoryView();
   }
 };
