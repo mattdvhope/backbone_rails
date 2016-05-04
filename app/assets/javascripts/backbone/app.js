@@ -28,3 +28,5 @@ var App = {
 };
 
 App.init();
+
+shopping_list.fetch();
