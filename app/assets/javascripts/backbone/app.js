@@ -4,8 +4,6 @@
 //= require_tree ./views
 //= require_tree ./routers
 
-
-
 var App = {
   instantiateCategoryView: function() {
     this.categories = new Categories();
