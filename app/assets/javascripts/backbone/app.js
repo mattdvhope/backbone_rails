@@ -10,23 +10,26 @@ var App = {
     this.categoryView = new CategoryView({ collection: this.categories });
     $("#categorymodal").html(this.categoryView.render().el);
 
-    shopping_list = new ShoppingList()
-    shopping_list.bind('sync', function() {
+    app_shopping_list = new ShoppingList()
+    app_shopping_list.bind('sync', function() {
       $(".shoppinglist").empty();
 
-      shopping_list.each(function(shop_item) {
+      app_shopping_list.each(function(shop_item) {
         var view = new ShopItemView({ model: shop_item, categories: this.categories });
 
         $(".shoppinglist").append(view.render().el);
       }, this);
     });
   },
-
+  fetch_app_shopping_list: function() {
+    
+    app_shopping_list.fetch();
+  },
   init: function() {
     this.instantiateCategoryView();
+    this.fetch_app_shopping_list();
   }
 };
 
 App.init();
 
-shopping_list.fetch();

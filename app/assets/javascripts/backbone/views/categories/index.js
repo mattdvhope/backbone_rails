@@ -27,6 +27,7 @@ window.CategoryView = Backbone.View.extend({
     // this.withoutIds = this.collection.filter(function (category) {
     //   return !category.id;
     // });
+    // App.instantiateCategoryView();
     this.show();
   },
 
