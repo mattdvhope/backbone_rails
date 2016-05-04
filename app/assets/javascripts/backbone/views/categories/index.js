@@ -10,7 +10,7 @@ window.CategoryView = Backbone.View.extend({
   initialize: function() { // 'initialize' is the constructor of this particular view
     _.bindAll(this, 'render');
     this.collection.fetch();
-    // this.collection.bind('all', this.render);
+    // this.collection.bind("reset", _.bind(this.render, this));
     this.listenTo(this.collection, 'all', this.render);
   },
 
@@ -24,11 +24,23 @@ window.CategoryView = Backbone.View.extend({
 
   addCategory: function(e) {
     e.preventDefault();
-    this.collection.create({ name: $(this.el).find('.category_name').val() });
+    var attributes = { name: $(this.el).find('.category_name').val() }
+    // this.collection.create({ name: $(this.el).find('.category_name').val() }, {wait: true});
+
+    this.collection.create(attributes, {
+      wait: false,
+      success: function() {
+        return this.collection.trigger('reset');
+      },
+      error: function() {
+        return console.log('wrong!');
+      }
+    })
+
+
     // this.withoutIds = this.collection.filter(function (category) {
     //   return !category.id;
     // });
-    // App.instantiateCategoryView();
     this.collection.fetch();
     this.show();
   },
