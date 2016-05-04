@@ -10,7 +10,8 @@ window.CategoryView = Backbone.View.extend({
   initialize: function() { // 'initialize' is the constructor of this particular view
     _.bindAll(this, 'render');
     this.collection.fetch();
-    this.collection.bind('all', this.render);
+    // this.collection.bind('all', this.render);
+    this.listenTo(this.collection, 'all', this.render);
   },
 
   toggle: function() {
@@ -27,8 +28,8 @@ window.CategoryView = Backbone.View.extend({
     // this.withoutIds = this.collection.filter(function (category) {
     //   return !category.id;
     // });
-    App.instantiateCategoryView();
-    App.instantiateCategoryView();
+    // App.instantiateCategoryView();
+    this.collection.fetch();
     this.show();
   },
 
@@ -36,7 +37,6 @@ window.CategoryView = Backbone.View.extend({
     e.preventDefault();
     var id = $(e.target).parents('li').data('id');
     var model = this.collection.where({ id: id })[0];
-console.log(id);
     this.collection.remove(model);
     if (model) { model.destroy(); }
     this.render();
@@ -59,6 +59,7 @@ console.log(id);
       var li_template = HandlebarsTemplates['categories/show']
       $(this.el).find('.categories').append(li_template({
         id: cat.toJSON().id,
+        cid: cat.toJSON().cid,
         name: cat.toJSON().name
       }));
     }, this); // The 'this' at the end causes the 'this' inside of this 'forEach' statement to be the same 'this' that is part of the rest of the app.
