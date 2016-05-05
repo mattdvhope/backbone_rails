@@ -16,7 +16,7 @@ class ShopitemsController < ApplicationController
   def update
     @shop_item = ShopItem.find(params[:id])
     @shop_item.update(shop_item_params)
-    redirect_to shopitem_path(@shop_item)
+    render :nothing => true
   end
 
   def destroy
