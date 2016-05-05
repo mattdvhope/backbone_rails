@@ -16,6 +16,9 @@ var App = {
 
       app_shopping_list.each(function(shop_item) {
         var view = new ShopItemView({ model: shop_item, categories: this.categories });
+console.log(view.model.get('category') && view.model.get('category').get('name').length > 0 ? view.model.get('category').get('name') : 'no category');
+console.log(shop_item.toJSON());
+console.log(view.model.get('category'));
 
         $(".shoppinglist").append(view.render().el);
       }, this);

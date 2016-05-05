@@ -9,12 +9,13 @@ window.ShopItemView = Backbone.View.extend({
 
   initialize: function() {
     _.bindAll(this, 'render');
-    this.model.bind('change', this.render);
+    // this.model.bind('change', this.render);
+    this.listenTo(this.model, 'change', this.render);
   },
   render: function() {
     $(this.el).html(this.template({
       model_name: this.model.get('name'),
-      item_name: this.model.get('category') && this.model.get('category').get('name').length > 0 ? this.model.get('category').get('name') : 'no category',
+      cat_name: this.model.get('category') && this.model.get('category').get('name').length > 0 ? this.model.get('category').get('name') : 'no category',
     }));
 
     App.categories.models.forEach(function(cat) {

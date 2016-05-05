@@ -51,6 +51,8 @@ window.CategoriesView = Backbone.View.extend({
         return 0;
     });
 
+
+
     this.collection.models.forEach(function(cat) {
       var li_template = HandlebarsTemplates['categories/show']
       $(this.el).find('.categories').append(li_template({
