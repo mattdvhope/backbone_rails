@@ -4,7 +4,8 @@ window.ShopItem = Backbone.Model.extend({
 
   defaults: function() {
     return {
-      purchased: false
+      purchased: false,
+      category: null
     };
   },
 
