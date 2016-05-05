@@ -5,10 +5,10 @@
 //= require_tree ./routers
 
 var App = {
-  instantiateCategoryView: function() {
+  instantiateCategoriesView: function() {
     this.categories = new Categories();
-    this.categoryView = new CategoryView({ collection: this.categories });
-    $("#categorymodal").html(this.categoryView.render().el);
+    this.categoriesView = new CategoriesView({ collection: this.categories });
+    $("#categorymodal").html(this.categoriesView.render().el);
 
     app_shopping_list = new ShoppingList()
     app_shopping_list.bind('sync', function() {
@@ -25,7 +25,7 @@ var App = {
     app_shopping_list.fetch();
   },
   init: function() {
-    this.instantiateCategoryView();
+    this.instantiateCategoriesView();
     this.fetch_app_shopping_list();
   }
 };
