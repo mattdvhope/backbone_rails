@@ -10,19 +10,19 @@ class ShopitemsController < ApplicationController
 
   def create
     @shop_item = ShopItem.create(shop_item_params)
-    render :nothing => true
+    redirect_to shopitem_path(@shop_item)
   end
 
   def update
     @shop_item = ShopItem.find(params[:id])
     @shop_item.update(shop_item_params)
-    render :nothing => true
+    redirect_to shopitem_path(@shop_item)
   end
 
   def destroy
     @shop_item = ShopItem.find(params[:id])
     @shop_item.destroy
-    render :nothing => true
+    redirect_to shopitem_path(@shop_item)
   end
 
   private
