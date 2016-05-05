@@ -10,7 +10,7 @@ class CategoriesController < ApplicationController
 
   def create
     @category = Category.create(category_params)
-    render :nothing => true
+    redirect_to category_path(@category)
   end
 
   def update
