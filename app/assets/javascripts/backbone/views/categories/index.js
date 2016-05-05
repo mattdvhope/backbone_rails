@@ -24,16 +24,15 @@ window.CategoryView = Backbone.View.extend({
 
   addCategory: function(e) {
     e.preventDefault();
-    var attributes = { name: $(this.el).find('.category_name').val() }
+    var cat_added = { name: $(this.el).find('.category_name').val() }
     // this.collection.create({ name: $(this.el).find('.category_name').val() }, {wait: true});
 
-    this.collection.create(attributes, {
-      wait: false,
+    this.collection.create(cat_added, {
       success: function() {
         return this.collection.trigger('reset');
       },
       error: function() {
-        return console.log('wrong!');
+        return console.log('error');
       }
     })
 
@@ -41,7 +40,6 @@ window.CategoryView = Backbone.View.extend({
     // this.withoutIds = this.collection.filter(function (category) {
     //   return !category.id;
     // });
-    this.collection.fetch();
     this.show();
   },
 
