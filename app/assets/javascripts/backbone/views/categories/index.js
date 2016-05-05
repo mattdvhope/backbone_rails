@@ -1,7 +1,7 @@
-window.CategoryView = Backbone.View.extend({
+window.CategoriesView = Backbone.View.extend({
 
   // className: "a-class",
-  show_template:HandlebarsTemplates['categories/index'],
+  index_template: HandlebarsTemplates['categories/index'],
   events: {
     'click .close': 'hide',
     'click .delete': 'removeCategory',
@@ -10,7 +10,6 @@ window.CategoryView = Backbone.View.extend({
   initialize: function() { // 'initialize' is the constructor of this particular view
     _.bindAll(this, 'render');
     this.collection.fetch();
-    // this.collection.bind("reset", _.bind(this.render, this));
     this.listenTo(this.collection, 'all', this.render);
   },
 
@@ -24,22 +23,9 @@ window.CategoryView = Backbone.View.extend({
 
   addCategory: function(e) {
     e.preventDefault();
-    var cat_added = { name: $(this.el).find('.category_name').val() }
-    // this.collection.create({ name: $(this.el).find('.category_name').val() }, {wait: true});
-
-    this.collection.create(cat_added, {
-      success: function() {
-        return this.collection.trigger('reset');
-      },
-      error: function() {
-        return console.log('error');
-      }
-    })
-
-
-    // this.withoutIds = this.collection.filter(function (category) {
-    //   return !category.id;
-    // });
+    var model = new Category({ name: $(this.el).find('.category_name').val() });
+    model.save();
+    this.collection.add(model);
     this.show();
   },
 
@@ -53,7 +39,7 @@ window.CategoryView = Backbone.View.extend({
   },
 
   render: function() {
-    $(this.el).html(this.show_template());
+    $(this.el).html(this.index_template());
 
     this.collection.models = this.collection.models.sort(function(a, b) {
         a = a.get('id');
@@ -69,7 +55,6 @@ window.CategoryView = Backbone.View.extend({
       var li_template = HandlebarsTemplates['categories/show']
       $(this.el).find('.categories').append(li_template({
         id: cat.toJSON().id,
-        cid: cat.toJSON().cid,
         name: cat.toJSON().name
       }));
     }, this); // The 'this' at the end causes the 'this' inside of this 'forEach' statement to be the same 'this' that is part of the rest of the app.
