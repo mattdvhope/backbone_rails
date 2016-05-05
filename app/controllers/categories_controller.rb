@@ -16,8 +16,6 @@ class CategoriesController < ApplicationController
   def update
     @category = Category.find(params[:id])
     @category.update(category_params)
-binding.pry
-    # redirect_to category_path(@category)
     render :nothing => true
   end
 
