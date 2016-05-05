@@ -22,7 +22,7 @@ class CategoriesController < ApplicationController
   def destroy
     @category = Category.find(params[:id])
     @category.destroy
-    redirect_to category_path(@category)
+    render :nothing => true
   end
 
   private

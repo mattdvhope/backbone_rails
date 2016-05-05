@@ -22,7 +22,7 @@ class ShopitemsController < ApplicationController
   def destroy
     @shop_item = ShopItem.find(params[:id])
     @shop_item.destroy
-    redirect_to shopitem_path(@shop_item)
+    render :nothing => true
   end
 
   private
