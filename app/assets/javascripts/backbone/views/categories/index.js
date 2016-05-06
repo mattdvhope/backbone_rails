@@ -40,7 +40,7 @@ window.CategoriesView = Backbone.View.extend({
 
   render: function() {
     $(this.el).html(this.index_template());
-
+// console.log(App.app_shopping_list);
     this.collection.models = this.collection.models.sort(function(a, b) {
         a = a.get('id');
         b = b.get('id');

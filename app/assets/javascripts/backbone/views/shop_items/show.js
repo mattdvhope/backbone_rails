@@ -5,11 +5,26 @@ window.ShopItemView = Backbone.View.extend({
 
   li_template: HandlebarsTemplates['shop_items/list_item'],
 
-  events: {},
+  events: {
+    'click .dropdown-toggle': 'render_cat_list_in_dropdown',
+  },
+
+  render_cat_list_in_dropdown: function() {
+console.log("rendering dropdown-menu???");
+    $(this.el).find('.dropdown-menu').empty();
+    App.categories.models.forEach(function(cat) {
+
+      var li_template = HandlebarsTemplates['shop_items/list_item']
+      $(this.el).find('.dropdown-menu').append(li_template({
+        id: cat.toJSON().id,
+        name: cat.toJSON().name
+      }));
+    }, this); // The 'this' at the end causes the 'this' inside of this 'forEach' statement to be the same 'this' that is part of the rest of the app.
+  },
 
   initialize: function() {
     _.bindAll(this, 'render');
-    // this.model.bind('change', this.render);
+    App.categories.fetch();
     this.listenTo(this.model, 'change', this.render);
   },
   render: function() {
@@ -18,13 +33,7 @@ window.ShopItemView = Backbone.View.extend({
       cat_name: this.model.get('category') && this.model.get('category').get('name').length > 0 ? this.model.get('category').get('name') : 'no category',
     }));
 
-    App.categories.models.forEach(function(cat) {
-      var li_template = HandlebarsTemplates['shop_items/list_item']
-      $(this.el).find('.dropdown-menu').append(li_template({
-        id: cat.toJSON().id,
-        name: cat.toJSON().name
-      }));
-    }, this); // The 'this' at the end causes the 'this' inside of this 'forEach' statement to be the same 'this' that is part of the rest of the app.
+    this.render_cat_list_in_dropdown();
 
     return this;
   }
